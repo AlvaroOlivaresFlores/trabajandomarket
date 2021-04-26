@@ -57,6 +57,29 @@ export class ServicesviewComponent implements OnInit {
       description: '',
       price: 10000,
       category: 'Tecnologia',
+    },    {
+      name: 'Servicio 9',
+      description: '',
+      price: 2000,
+      category: 'Tecnologia',
+    },
+    {
+      name: 'Servicio 10',
+      description: '',
+      price: 200000,
+      category: 'Tecnologia',
+    },
+    {
+      name: 'Servicio 11',
+      description: '',
+      price: 10000,
+      category: 'Tecnologia',
+    },
+    {
+      name: 'Servicio 12',
+      description: '',
+      price: 10000,
+      category: 'Tecnologia',
     },
   ];
 }
