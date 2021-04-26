@@ -35,6 +35,7 @@ import { ServicecardComponent } from './components/servicecard/servicecard.compo
 import { SliderComponent } from './components/slider/slider.component';
 import { UserviewComponent } from './components/views/users/userview/userview.component';
 import { ServicesliderComponent } from './components/serviceslider/serviceslider.component';
+import { AdmindialogComponent } from './components/admindialog/admindialog.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { ServicesliderComponent } from './components/serviceslider/serviceslider
     ServicecardComponent,
     SliderComponent,
     UserviewComponent,
-    ServicesliderComponent
+    ServicesliderComponent,
+    AdmindialogComponent,
   ],
   imports: [
     BrowserModule,

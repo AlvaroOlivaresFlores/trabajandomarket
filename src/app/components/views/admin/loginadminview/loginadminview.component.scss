@@ -1,0 +1,39 @@
+.pass {
+  width: 100%;
+}
+.name{
+  width: 100%;
+}
+.container1 {
+  height: 150px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input {
+  width: 100%;
+}
+
+.btn {
+  text-align: center;
+  width: 100%;
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+
+  color: rgba(232, 230, 227, 0.87);
+  background-color: rgb(6, 66, 115);
+}
+
+.title {
+  text-align: left;
+  display: flex;
+  align-content: left;
+}
+.x {
+  height: 700px;
+}
+
+.fg {
+  margin-bottom: 20px;
+}
