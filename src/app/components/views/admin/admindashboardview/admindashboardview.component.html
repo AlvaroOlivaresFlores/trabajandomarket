@@ -1,15 +1,23 @@
-<div class="main">
-  <div class="">
-    <mat-toolbar class="toolbar">
-      <span>Trabajando Market</span>
-      <span class="espacio"></span>
-
-      <button routerLink='/adminlogin' mat-icon-button>
-        <mat-icon>logout</mat-icon>
-      </button>
-    </mat-toolbar>
-  </div>
-
+<mat-toolbar class="navbar" color="primary">
+  <button routerLink="/adminlogin" mat-button aria-label="home">
+    <span class="title">Trabajando Market</span>
+  </button>
+  <span class="spacer"></span>
+  <button
+    mat-icon-button
+    [matMenuTriggerFor]="menu"
+    aria-label="menu"
+  >
+    <mat-icon> account_circle </mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/adminlogin">
+      <mat-icon>logout</mat-icon>
+      <span>Cerrar Sesion</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>
+<div class="main bg">
   <div class="container">
     <h1>Panel Administracion</h1>
     <mat-tab-group mat-align-tabs="start">
