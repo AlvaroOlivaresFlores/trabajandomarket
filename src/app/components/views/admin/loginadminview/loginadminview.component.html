@@ -1,1 +1,50 @@
-<p>loginadminview works!</p>
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row center-xs middle-xs x">
+    <div class="col-xs-4">
+      <div class="box">
+        <mat-card>
+          <div class="row">
+            <mat-card-header>
+              <div class="col-xs-12">
+                <mat-card-title class="title">
+                  Iniciar como Administrador
+                </mat-card-title>
+              </div>
+            </mat-card-header>
+          </div>
+          <hr />
+          <div class="container1">
+            <mat-form-field  appearance="fill" class="name">
+              <mat-label>Nombre</mat-label>
+              <input matInput type="string" class="input" />
+              <mat-icon matSuffix>account_circle</mat-icon>
+            </mat-form-field>
+          
+            <mat-form-field appearance="fill" class="pass">
+              <mat-label>Clave</mat-label>
+              <input matInput [type]="hide ? 'password' : 'text'" />
+              <button
+                mat-icon-button
+                matSuffix
+                (click)="hide = !hide"
+                [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide"
+              >
+                <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+              </button>
+            </mat-form-field>
+          </div>
+          <mat-card-actions>
+            <button routerLink='/admin/dashboard' mat-button class="btn">
+              Iniciar Sesion
+            </button>
+          </mat-card-actions>
+          <mat-card-footer> </mat-card-footer>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

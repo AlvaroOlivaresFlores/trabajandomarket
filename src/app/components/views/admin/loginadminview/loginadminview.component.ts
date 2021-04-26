@@ -11,5 +11,5 @@ export class LoginadminviewComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  hide = true;
 }

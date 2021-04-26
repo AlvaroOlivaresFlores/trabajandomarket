@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdmindashboardviewComponent } from './components/views/admin/admindashboardview/admindashboardview.component';
 import { AdminviewComponent } from './components/views/admin/adminview/adminview.component';
 import { LoginadminviewComponent } from './components/views/admin/loginadminview/loginadminview.component';
 import { EntrepreneurhomeviewComponent } from './components/views/entrepreneurs/entrepreneurhomeview/entrepreneurhomeview.component';
@@ -19,6 +20,7 @@ import { SignupviewComponent } from './components/views/users/signupview/signupv
 const routes: Routes = [
   { path: '', component: LandingpageComponent },
   { path: 'login', component: LoginviewComponent },
+  {path: 'adminlogin', component: LoginadminviewComponent},
   { path: 'signup', component: SignupviewComponent },
   { path: 'forgotpassword', component: ForgotpasswordviewComponent },
   {
@@ -47,8 +49,8 @@ const routes: Routes = [
   },
   {
     path: 'admin',
-    component: LoginadminviewComponent,
-    children: [{ path: 'home', component: AdminviewComponent }],
+    component: AdminviewComponent,
+    children: [{ path: 'dashboard', component: AdmindashboardviewComponent }],
   },
 ];
 

@@ -30,6 +30,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { TableComponent } from './components/table/table.component';
+import { AdmindialogComponent } from './components/admindialog/admindialog.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { TableComponent } from './components/table/table.component';
     FooterComponent,
     NavbarComponent,
     SearchbarComponent,
-    TableComponent
+    TableComponent,
+    AdmindialogComponent
   ],
   imports: [
     BrowserModule,
