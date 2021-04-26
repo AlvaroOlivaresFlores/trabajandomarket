@@ -1,0 +1,12 @@
+.container {
+    padding-top: 2em;
+    height: calc(100vh - 18.6em);
+  }
+  @media only screen and (max-width: 600px) {
+    .container {
+      width: 95%;
+      padding-top: 2em;
+      height: calc(100vh - 18em);
+    }
+  }
+  

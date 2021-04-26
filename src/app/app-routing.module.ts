@@ -15,6 +15,7 @@ import { LoginviewComponent } from './components/views/users/loginview/loginview
 import { ServicesrequestviewComponent } from './components/views/users/servicesrequestview/servicesrequestview.component';
 import { ServicesviewComponent } from './components/views/users/servicesview/servicesview.component';
 import { SignupviewComponent } from './components/views/users/signupview/signupview.component';
+import { UserviewComponent } from './components/views/users/userview/userview.component';
 
 const routes: Routes = [
   { path: '', component: LandingpageComponent },
@@ -23,8 +24,9 @@ const routes: Routes = [
   { path: 'forgotpassword', component: ForgotpasswordviewComponent },
   {
     path: 'home',
-    component: HomeviewComponent,
+    component: UserviewComponent,
     children: [
+      { path: '', component: HomeviewComponent},
       { path: 'hireservice', component: HireserviceviewComponent },
       { path: 'services', component: ServicesviewComponent },
       { path: 'hiredservices', component: HiredservicesviewComponent },

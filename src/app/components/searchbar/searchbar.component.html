@@ -1,1 +1,39 @@
-<p>searchbar works!</p>
+<div class="main" [ngClass]="{ 'mat-elevation-z5': true, compensation: isSticky }">
+  <div
+    class="toolbar"
+    [ngClass]="{ 'mat-elevation-z5': true, sticky: isSticky }"
+  >
+    <div class="searchbar">
+      <div class="container">
+        <div class="fixed">
+          <div class="row center-xs around-xs">
+            <div class="col-xs-9">
+              <mat-form-field
+                style="margin-bottom: -1.25em; width: 100%"
+                appearance="outline"
+              >
+                <mat-label>Buscar Servico</mat-label>
+                <input type="search" matInput />
+                <mat-icon matSuffix>search</mat-icon>
+              </mat-form-field>
+            </div>
+            <div class="col-xs-3">
+              <mat-form-field
+                appearance="outline"
+                style="margin-bottom: -1.25em; width: 100%"
+              >
+                <mat-label>Categoria</mat-label>
+                <mat-select>
+                  <mat-option value="one">Marketing Digital</mat-option>
+                  <mat-option value="two">Diseño Grafico</mat-option>
+                  <mat-option value="two">Edicion de Video</mat-option>
+                  <mat-option value="two">Desarrollo Web</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

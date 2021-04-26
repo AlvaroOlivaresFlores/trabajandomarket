@@ -1,0 +1,45 @@
+ul {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background: white;
+  li {
+    display: block;
+    list-style: none;
+    text-align: center;
+    padding: 1em;
+    a {
+      font-size: 1.1em;
+      color: grey;
+      font-weight: 500;
+      cursor: pointer;
+      &:hover {
+        color: black;
+        transition: color 400ms;
+      }
+    }
+  }
+}
+.banner {
+  text-align: center;
+  background: grey;
+  color: white;
+  padding: 4em;
+}
+.container {
+    .row {
+        margin: auto;
+    }
+}
+h1 {
+    border-bottom: 1px solid grey;
+}
+.serviceslider {
+    margin-top: 2.4em;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 95%;
+  }
+}

@@ -1,1 +1,12 @@
-<p>servicesview works!</p>
+<app-searchbar></app-searchbar>
+<section class="container main">
+    <div class="row around-xs">
+      <div class="box" *ngFor="let service of services; index as i">
+        <app-servicecard
+          [name]="service.name"
+          [price]="service.price"
+          [category]="service.category"
+        ></app-servicecard>
+      </div>
+    </div>
+  </section>

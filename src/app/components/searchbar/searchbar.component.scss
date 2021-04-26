@@ -1,0 +1,26 @@
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  transition: opacity 0.25s ease-out, height 0.15s ease;
+  opacity: 1;
+}
+.compensation {
+  margin-bottom: 11em;
+}
+.toolbar {
+  background: white;
+  width: 100%;
+}
+.searchbar {
+  margin: auto;
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+}
+
+@media only screen and (max-width: 1000px) {
+    .searchbar {
+        width: 90%;
+        margin: auto;
+    }
+}

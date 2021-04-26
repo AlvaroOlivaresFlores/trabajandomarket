@@ -1,0 +1,44 @@
+.example-card {
+  max-width: 220px;
+  border-radius: 0;
+}
+
+.example-header-image {
+  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
+}
+
+.staricon {
+  color: goldenrod;
+  font-size: 1.4em;
+  margin-left: 0.2em;
+}
+.rate {
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  font-weight: 420;
+}
+.imgdiv {
+  height: 160px;
+  cursor: pointer;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+  background-color: rgb(53, 53, 163);
+}
+
+.imgdiv img {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}

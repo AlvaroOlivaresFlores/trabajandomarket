@@ -1,0 +1,47 @@
+<div>
+  <div class="card">
+    <mat-card class="example-card">
+      <div mat-card-image>
+        <div class="imgdiv" matRipple routerLink="/home/hireservice">
+          <img
+            src="http://placekitten.com/400/300"
+            alt="Photo of a Shiba Inu"
+          />
+        </div>
+      </div>
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{ name }}</mat-card-title>
+        <mat-card-subtitle>{{ category }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          {{ description }}<br />
+          <b>Precio: {{ price }} CLP</b>
+        </p>
+      </mat-card-content>
+      <mat-divider></mat-divider>
+      <mat-card-actions>
+        <div class="row middle-xs around-xs">
+          <span class="rate">
+            {{ rate }}
+            <mat-icon
+              class="staricon"
+              aria-hidden="false"
+              aria-label="star icon"
+              >star</mat-icon
+            >
+          </span>
+          <button
+            routerLink="/home/hireservice"
+            routerLinkActive="active"
+            mat-flat-button
+            color="primary"
+          >
+            <mat-icon>read_more</mat-icon> Ver mas
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

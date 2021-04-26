@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 import { MaterialModule } from './material/material.module';
 import { SwiperModule } from 'swiper/angular';
@@ -30,6 +31,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { TableComponent } from './components/table/table.component';
+import { ServicecardComponent } from './components/servicecard/servicecard.component';
+import { SliderComponent } from './components/slider/slider.component';
+import { UserviewComponent } from './components/views/users/userview/userview.component';
+import { ServicesliderComponent } from './components/serviceslider/serviceslider.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +60,11 @@ import { TableComponent } from './components/table/table.component';
     FooterComponent,
     NavbarComponent,
     SearchbarComponent,
-    TableComponent
+    TableComponent,
+    ServicecardComponent,
+    SliderComponent,
+    UserviewComponent,
+    ServicesliderComponent
   ],
   imports: [
     BrowserModule,

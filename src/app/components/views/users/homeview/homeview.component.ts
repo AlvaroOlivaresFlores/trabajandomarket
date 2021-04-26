@@ -12,4 +12,19 @@ export class HomeviewComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  mostviewed = [
+    {
+      name: 'service 1'
+    },
+    {
+      name: 'service 2'
+    },
+    {
+      name: 'service 3'
+    },
+    {
+      name: 'service 4'
+    }
+  ] 
+
 }

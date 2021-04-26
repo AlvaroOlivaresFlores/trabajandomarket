@@ -1,1 +1,81 @@
-<p>hireserviceview works!</p>
+<section class="container main">
+    <span class="mat-h3 breadcrumbs">
+      <a routerLink="/home/">Home</a>
+      <mat-icon>navigate_next</mat-icon>
+      <a routerLink="/home/services">Servicios</a>
+      <mat-icon>navigate_next</mat-icon>
+      <a routerLink="/home/hiredservices">Contratar Servicio</a>
+    </span>
+    <div class="row cennter-xs">
+      <div class="col-xs-12 col-lg-8 colservice">
+        <mat-card>
+          <h1>Service 1</h1>
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Shiba Inu</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+          <div class="divimg">
+            <app-slider class="slider"></app-slider>
+          </div>
+          <div class="servicedescription">
+            <h1>Descripcion</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+              doloribus aperiam quo reprehenderit sequi! Sapiente fuga in illo
+              nulla consequuntur, soluta distinctio consequatur, inventore rem
+              harum voluptas beatae reprehenderit recusandae? Lorem ipsum dolor
+              sit amet consectetur adipisicing elit. Cum doloribus aperiam quo
+              reprehenderit sequi! Sapiente fuga in illo nulla consequuntur,
+              soluta distinctio consequatur, inventore rem harum voluptas beatae
+              reprehenderit recusandae?
+            </p>
+          </div>
+        </mat-card>
+      </div>
+      <div class="col-xs-12 col-lg-4">
+        <mat-card>
+          <mat-card-content>
+            <h1>Informacion General</h1>
+            <mat-divider></mat-divider>
+            <div class="row">
+              <div class="col servicedata">
+                <div class="row between-xs middle-xs">
+                  <div class="col">
+                    <h2 class="mid"><mat-icon>payments</mat-icon> Precio:</h2>
+                  </div>
+                  <div class="col">
+                    <h2>$ 2000</h2>
+                  </div>
+                </div>
+                <div class="row between-xs middle-xs">
+                  <div class="col">
+                    <h2 class="mid">
+                      <mat-icon>access_time_filled</mat-icon> Plazo:
+                    </h2>
+                  </div>
+                  <div class="col">
+                    <h2>2 dias</h2>
+                  </div>
+                </div>
+                <div class="row between-xs middle-xs">
+                  <div class="col">
+                    <h2 class="mid">
+                      <mat-icon>trending_up</mat-icon> Puntacion:
+                    </h2>
+                  </div>
+                  <div class="col">
+                    <h2>4.5 (200)</h2>
+                  </div>
+                </div>
+                <button class="btn" mat-raised-button color="primary">
+                  Contratar Servicio
+                </button>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+  
