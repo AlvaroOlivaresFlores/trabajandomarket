@@ -1,12 +1,19 @@
-<app-navbar></app-navbar>
-<div class="container">
+
+<mat-toolbar class="navbar" color="primary">
+  <button routerLink="/adminlogin" mat-button aria-label="home">
+    <span class="title">Trabajando Market</span>
+  </button>
+  <span class="spacer"></span>
+</mat-toolbar>
+
+<div class="container bg">
   <div class="row center-xs middle-xs x">
     <div class="col-xs-4">
       <div class="box">
         <mat-card>
-          <div class="row">
+          <div class="row center-xs">
             <mat-card-header>
-              <div class="col-xs-12">
+              <div class="col-xs-12-">
                 <mat-card-title class="title">
                   Iniciar como Administrador
                 </mat-card-title>
@@ -35,6 +42,7 @@
               </button>
             </mat-form-field>
           </div>
+          <mat-checkbox color="primary" class="check">Recordar contraseña</mat-checkbox>
           <mat-card-actions>
             <button routerLink='/admin/dashboard' mat-button class="btn">
               Iniciar Sesion
