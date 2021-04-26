@@ -4,25 +4,24 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 
 export interface ReportData {
-  id: number;
   date: string;
-  name: string;
-  report: string;
-  status: string;
+  usuarios: number;
+  innovadores: number;
+  ganancias: number;
 }
 
 const ELEMENT_DATA: ReportData[] = [
-  {id:1,date: "01-01-2020", name: 'NombreApellido1', report: "asdassdasfasfsfas",status:"Atendida"},
-  {id:2,date: "05-03-2020", name: 'NombreApellido2', report: "asdfasfsdfasdfasdfa",status:"Pendiente"},
-  {id:3,date: "30-05-2020", name: 'NombreApellido3', report: "asdfasdfasdfasdfasdfasd",status:"Pendiente"},
-  {id:4,date: "30-05-2020", name: 'NombreApellido4', report: "asdfasdfasdfasdfasdfasd",status:"Pendiente"},
-  {id:5,date: "30-05-2020", name: 'NombreApellido5', report: "asdfasdfasdfasdfasdfasd",status:"Pendiente"},
-  {id:6,date: "30-05-2020", name: 'NombreApellido6', report: "asdfasdfasdfasdfasdfasd",status:"Pendiente"},
-  {id:7,date: "30-05-2020", name: 'NombreApellido7', report: "asdfasdfasdfasdfasdfasd",status:"Pendiente"},
-  {id:8,date: "30-05-2020", name: 'NombreApellido8', report: "asdfasdfasdfasdfasdfasd",status:"Pendiente"},
-  {id:9,date: "30-05-2020", name: 'NombreApellido9', report: "asdfasdfasdfasdfasdfasd",status:"Pendiente"},
-  {id:10,date: "30-05-2020", name: 'NombreApellido10', report: "asdfasdfasdfasdfasdfasd",status:"Pendiente"},
-  {id:11,date: "30-05-2020", name: 'NombreApellido11', report: "asdfasdfasdfasdfasdfasd",status:"Pendiente"},
+  {date: "30-05-2020", usuarios: 1000, innovadores: 500,ganancias:1000000},
+  {date: "29-05-2020", usuarios: 1000, innovadores: 500,ganancias:1000000},
+  {date: "28-05-2020", usuarios: 1000, innovadores: 500,ganancias:1000000},
+  {date: "27-05-2020", usuarios: 1000, innovadores: 500,ganancias:1000000},
+  {date: "26-05-2020", usuarios: 1000, innovadores: 500,ganancias:1000000},
+  {date: "25-05-2020", usuarios: 1000, innovadores: 500,ganancias:1000000},
+  {date: "24-05-2020", usuarios: 1000, innovadores: 500,ganancias:1000000},
+  {date: "23-05-2020", usuarios: 1000, innovadores: 500,ganancias:1000000},
+  {date: "22-05-2020", usuarios: 1000, innovadores: 500,ganancias:1000000},
+  {date: "21-05-2020", usuarios: 1000, innovadores: 500,ganancias:1000000},
+  {date: "20-05-2020", usuarios: 1000, innovadores: 500,ganancias:1000000},
 ];
 
 @Component({
@@ -31,7 +30,7 @@ const ELEMENT_DATA: ReportData[] = [
   styleUrls: ['./reportsview.component.scss']
 })
 export class ReportsviewComponent implements OnInit {
-  displayedColumns: string[] = ['id','date', 'name', 'report','status'];
+  displayedColumns: string[] = ['date', 'usuarios', 'innovadores','ganancias'];
 
   ngOnInit(): void {}
   dataSource = new MatTableDataSource<ReportData>(ELEMENT_DATA);
