@@ -16,9 +16,13 @@ import { MatRippleModule } from '@angular/material/core';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import {MatTabsModule} from '@angular/material/tabs';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatStepperModule } from '@angular/material/stepper';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatChipsModule} from '@angular/material/chips';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+
 
 @NgModule({
   declarations: [],
@@ -41,7 +45,13 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatSortModule,
     MatTabsModule,
     MatSnackBarModule,
+
+    MatStepperModule,
+    MatProgressSpinnerModule,
+    MatChipsModule,
+
     MatCheckboxModule,
+
   ],
   exports: [
     MatToolbarModule,
@@ -61,7 +71,13 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatSortModule,
     MatTabsModule,
     MatSnackBarModule,
+
+    MatStepperModule,
+    MatProgressSpinnerModule,
+    MatChipsModule,
+
     MatCheckboxModule,
+
   ],
 })
 export class MaterialModule {}

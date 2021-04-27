@@ -1,0 +1,11 @@
+.dialog {
+    margin: auto;
+    text-align: center;
+    width: 400px;
+    mat-form-field {
+        width: 100%;
+    }
+    mat-chip-list {
+        width: 100%;
+    }
+}
