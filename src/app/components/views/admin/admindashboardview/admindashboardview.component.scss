@@ -3,7 +3,7 @@
 }
 
 .container {
-  margin-top: 2em;
+  padding-top: 2em;
 }
 
 .main {
@@ -19,6 +19,7 @@ th {
   justify-content: center;
   background-color: #1681c9;
   color: white;
+  font-size: 1.2em;
 }
 
 .spacer {
@@ -36,15 +37,25 @@ th {
   .title {
     font-size: 1.6em;
   }
+  width: 100%;
 }
 
-.bg{
-  width:100%;
-  background:rgb(244, 244, 244);
+.bg {
+  width: 100%;
+
+  background: rgb(244, 244, 244);
   background: linear-gradient(
     180deg,
     rgba(244, 244, 244, 1) 43%,
     rgba(152, 175, 250, 1) 78%
   );
-  padding-bottom: 2em;
+}
+
+::ng-deep .mat-sort-header-arrow {
+  color: white;
+  opacity: 1;
+}
+
+.mat-sort-header-arrow{
+  color: white;
 }
