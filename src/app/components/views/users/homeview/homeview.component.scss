@@ -15,27 +15,56 @@ ul {
       cursor: pointer;
       &:hover {
         color: black;
-        transition: color 400ms;
+        transition: color 300ms;
+        border-bottom: 2px solid #3f51b5;
       }
     }
   }
 }
 .banner {
   text-align: center;
-  background: grey;
   color: white;
-  padding: 4em;
+  padding: 6em;
+  background-image: url("../../../../img/banner.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  div {
+    display: inline-block;
+    background-color: rgba(66, 84, 129, 0.8);
+    margin: auto;
+    border-radius: 4px;
+    padding: 1em 5em 1em 5em;
+    h1 {
+      font-size: 2em;
+      font-weight: bold;
+      margin: 0;
+    }
+  }
 }
 .container {
-    .row {
-        margin: auto;
-    }
+  .row {
+    margin: auto;
+  }
 }
-h1 {
-    border-bottom: 1px solid grey;
-}
+
 .serviceslider {
-    margin-top: 2.4em;
+  margin-top: 2.4em;
+  h2 {
+    color: #404145;
+  }
+  a {
+    color: #3f51b5;
+    font-size: 1.2em;
+    font-weight: 450;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    &:hover {
+      color: #7a89e9;
+    }
+  }
 }
 
 @media only screen and (max-width: 600px) {

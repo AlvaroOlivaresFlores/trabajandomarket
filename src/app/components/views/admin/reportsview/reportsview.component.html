@@ -1,27 +1,23 @@
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
-    <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
-      <td mat-cell *matCellDef="let element">{{ element.id }}</td>
-    </ng-container>
   
     <ng-container matColumnDef="date">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Fecha</th>
       <td mat-cell *matCellDef="let element">{{ element.date }}</td>
     </ng-container>
   
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Nombre</th>
-      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+    <ng-container matColumnDef="usuarios">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Cantidad de Usuarios</th>
+      <td mat-cell *matCellDef="let element">{{ element.usuarios }}</td>
     </ng-container>
   
-    <ng-container matColumnDef="report">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Reporte</th>
-      <td mat-cell *matCellDef="let element">{{ element.report }}</td>
+    <ng-container matColumnDef="innovadores">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Cantidad de Innovadores</th>
+      <td mat-cell *matCellDef="let element">{{ element.innovadores }}</td>
     </ng-container>
   
-    <ng-container matColumnDef="status">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
-      <td mat-cell *matCellDef="let element">{{ element.status }}</td>
+    <ng-container matColumnDef="ganancias">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Ganancias</th>
+      <td mat-cell *matCellDef="let element">{{ element.ganancias | currency }}</td>
     </ng-container>
   
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

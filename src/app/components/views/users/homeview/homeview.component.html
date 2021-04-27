@@ -8,19 +8,35 @@
     </ul>
   </nav>
   <div class="banner">
-    <h1>Trabajando Market</h1>
-    <h2>Encuentra el servico que buscabas.</h2>
-    <button routerLink="/home/services" mat-flat-button color="primary">
-      Ver Servicios
-    </button>
+    <div>
+      <h1>TRABAJANDO MARKET</h1>
+      <h2>Encuentra el servico que buscabas.</h2>
+      <button routerLink="/home/services" mat-flat-button color="primary">
+        Ver Servicios
+      </button>
+    </div>
   </div>
   <section class="container">
     <div class="serviceslider">
-      <h1>Servicos mas vistos</h1>
+      <div class="row between-xs middle-xs">
+        <div class="col">
+          <h2>Servicios mas valorados</h2>
+        </div>
+        <div class="col">
+          <a routerLink="/home/services">Ver todos los servicios<mat-icon>chevron_right</mat-icon></a>
+        </div>
+      </div>
       <app-serviceslider></app-serviceslider>
     </div>
     <div class="serviceslider">
-      <h1>Servicos mas vistos</h1>
+      <div class="row between-xs middle-xs">
+        <div class="col">
+          <h2>Servicios mas vistos</h2>
+        </div>
+        <div class="col">
+          <a routerLink="/home/services">Ver todos los servicios<mat-icon>chevron_right</mat-icon></a>
+        </div>
+      </div>
       <app-serviceslider></app-serviceslider>
     </div>
   </section>

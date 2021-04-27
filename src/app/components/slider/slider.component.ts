@@ -1,5 +1,5 @@
-import { Component, ViewChild } from "@angular/core";
-import { SwiperComponent } from "swiper/angular";
+import { Component, ViewChild } from '@angular/core';
+import { SwiperComponent } from 'swiper/angular';
 
 import SwiperCore, {
   Navigation,
@@ -10,8 +10,8 @@ import SwiperCore, {
   Zoom,
   Autoplay,
   Thumbs,
-  Controller
-} from "swiper/core";
+  Controller,
+} from 'swiper/core';
 
 // install Swiper components
 SwiperCore.use([
@@ -23,16 +23,15 @@ SwiperCore.use([
   Zoom,
   Autoplay,
   Thumbs,
-  Controller
+  Controller,
 ]);
 
 @Component({
   selector: 'app-slider',
   templateUrl: './slider.component.html',
 })
-export class SliderComponent  {
-
-  @ViewChild("swiperRef", { static: false }) swiperRef?: SwiperComponent;
+export class SliderComponent {
+  @ViewChild('swiperRef', { static: false }) swiperRef?: SwiperComponent;
 
   thumbsSwiper: any;
   setThumbsSwiper(swiper: any) {

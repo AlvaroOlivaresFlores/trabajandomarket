@@ -1,24 +1,3 @@
-.espacio {
-  flex: 1 1 auto;
-}
-
-.toolbar {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 36%,
-    rgba(0, 212, 255, 1) 100%
-  );
-
-  width: 100%;
-  color: white;
-}
-
-.tittle {
-  margin-left: 10px;
-}
-
 .mat-tab-group {
   margin-bottom: 48px;
 }
@@ -32,5 +11,40 @@
 }
 
 table {
+  margin-top: 2em;
   width: 100%;
+  justify-content: center;
+}
+th {
+  justify-content: center;
+  background-color: #1681c9;
+  color: white;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.navbar {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 24%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  .title {
+    font-size: 1.6em;
+  }
+}
+
+.bg{
+  width:100%;
+  background:rgb(244, 244, 244);
+  background: linear-gradient(
+    180deg,
+    rgba(244, 244, 244, 1) 43%,
+    rgba(152, 175, 250, 1) 78%
+  );
+  padding-bottom: 2em;
 }

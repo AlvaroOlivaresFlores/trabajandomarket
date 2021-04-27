@@ -1,0 +1,139 @@
+.row1 {
+  background-image: url("../../../img/bannerlandingpage.png");
+  width: 100%;
+  text-align: center;
+  padding-top: 7em;
+  padding-bottom: 7em;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  .banner {
+    background: rgba(68, 95, 131, 0.6);
+    display: inline-block;
+    padding: 2em;
+    border-radius: 8px;
+  }
+}
+.row2 {
+  margin-top: 2em;
+  border-radius: 8px;
+  width: 100%;
+  background-image: url("../../../img/bannerlandingpage2.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  padding-top: 4.6em;
+  padding-bottom: 2.8em;
+  text-align: center;
+}
+.cards {
+  margin-top: 1em;
+}
+.titulo {
+  font-size: 47px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 500;
+  color: white;
+}
+.titulo1 {
+  font-size: 47px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 500;
+  color: white;
+  margin-bottom: .8em;
+}
+.titulo2 {
+  margin-top: 2em;
+  font-size: 100;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 500;
+}
+.subtitulo {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  color: white;
+  font-weight: 600;
+}
+.example-card {
+  max-width: 400px;
+}
+
+img {
+  width: 100%;
+}
+.card {
+  text-align: center;
+  text-justify: inter-word;
+  max-width: 280px;
+  height: 320px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  img {
+    border-radius: 8px;
+  }
+}
+
+
+.card-efect {
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  transform: scale(1);
+  transition: transform 400ms;
+}
+.card-efect:hover {
+  transform: scale(1.08);
+  transition: transform 400ms;
+}
+.cardcenter {
+  transform: scale(1.08);
+  i {
+    font-size: 6em;
+    margin-bottom: 10px;
+    color: grey;
+  }
+}
+.cardcenter:hover {
+  transform: scale(1.14);
+}
+.uwu {
+  margin-bottom: 2em;
+  font-size: 23px;
+}
+.img1 {
+  width: 110px;
+  height: 100px;
+}
+.box-efect {
+  margin: auto;
+}
+.box-efect:hover {
+  transform: scale(1.05);
+  transition: transform 500ms;
+}
+.btn-login {
+  padding: 2em;
+  text-decoration: none;
+  color: white;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+.imgs {
+  margin-bottom: 4em;
+  background: white;
+  border-radius: 8px;
+}
+.navbar {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 24%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  .title {
+    font-size: 1.6em;
+  }
+}
