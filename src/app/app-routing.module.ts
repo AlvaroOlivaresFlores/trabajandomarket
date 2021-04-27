@@ -21,14 +21,14 @@ import { UserviewComponent } from './components/views/users/userview/userview.co
 const routes: Routes = [
   { path: '', component: LandingpageComponent },
   { path: 'login', component: LoginviewComponent },
-  {path: 'adminlogin', component: LoginadminviewComponent},
+  { path: 'adminlogin', component: LoginadminviewComponent },
   { path: 'signup', component: SignupviewComponent },
   { path: 'forgotpassword', component: ForgotpasswordviewComponent },
   {
     path: 'home',
     component: UserviewComponent,
     children: [
-      { path: '', component: HomeviewComponent},
+      { path: '', component: HomeviewComponent },
       { path: 'hireservice', component: HireserviceviewComponent },
       { path: 'services', component: ServicesviewComponent },
       { path: 'hiredservices', component: HiredservicesviewComponent },
