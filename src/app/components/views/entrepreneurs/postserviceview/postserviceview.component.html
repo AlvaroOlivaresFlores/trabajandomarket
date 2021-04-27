@@ -1,1 +1,90 @@
-<p>postserviceview works!</p>
+<div class="container">
+  <mat-horizontal-stepper linear [labelPosition]="'bottom'">
+    <mat-step [editable]="true" [completed]="completed">
+      <ng-template matStepLabel>
+        <p>Detalle del servicio</p>
+      </ng-template>
+      <div class="row center-xs">
+        <form class="form">
+          <div class="col-xs">
+            <mat-form-field class="full-width">
+              <mat-label>Tipo de servicio</mat-label>
+              <input
+                matInput
+                placeholder="Ex. Programacion"
+                value="Marketing"
+              />
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Detalle del Servicio</mat-label>
+              <textarea matInput placeholder="Ex. Realiza..."></textarea>
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Descripcion</mat-label>
+              <textarea matInput placeholder="Ex. Realiza..."></textarea>
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Insertar precio</mat-label>
+              <input matInput placeholder="Ex. 510$" value="0$" />
+            </mat-form-field>
+          </div>
+        </form>
+        <div class="col-xs-12">
+          <button mat-button (click)="completeStep()">Completado</button>
+          <button mat-button matStepperNext>Siguiente</button>
+        </div>
+      </div>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>
+        <p>Publicar Imagen (opcional)</p>
+      </ng-template>
+      <div class="row center-xs">
+        <div class="col-xs-12">
+          <mat-card class="card">
+            <mat-card-header>
+              <div mat-card-avatar class="header-image"></div>
+              <mat-icon aria-hidden="false" aria-label="icon">imagen</mat-icon>
+              <mat-card-title>Insertar imagen</mat-card-title>
+              <mat-card-subtitle>servicio</mat-card-subtitle>
+            </mat-card-header>
+            <img
+              mat-card-image
+              src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+              alt="Photo"
+            />
+            <mat-card-actions>
+              <mat-icon aria-hidden="false" aria-label="icon">upload</mat-icon>
+              <button mat-button>Subir Imagen</button>
+              <mat-icon aria-hidden="false" aria-label="icon">delete</mat-icon>
+              <button mat-button>Eliminar Imagen</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+        <div class="col-xs-12">
+          <button mat-button matStepperPrevious>Atras</button>
+          <button mat-button matStepperNext>Siguiente</button>
+        </div>
+      </div>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>
+        <p>Confrimar publicacion</p>
+      </ng-template>
+      <div class="row center-xs">
+        <div class="col-xs-12">
+          <p>¿Esta seguro que desea continuar?</p>
+        </div>
+        <mat-spinner></mat-spinner>
+        <button mat-button matStepperPrevious>Atras</button>
+        <button mat-button>Completar</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>

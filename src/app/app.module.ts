@@ -36,6 +36,9 @@ import { SliderComponent } from './components/slider/slider.component';
 import { UserviewComponent } from './components/views/users/userview/userview.component';
 import { ServicesliderComponent } from './components/serviceslider/serviceslider.component';
 import { AdmindialogComponent } from './components/admindialog/admindialog.component';
+import { EntrepreneursComponent } from './components/views/entrepreneurs/entrepreneurs/entrepreneurs.component';
+import { EntrepreneucardComponent } from './components/entrepreneucard/entrepreneucard.component';
+import { EntrepreneurdialogComponent } from './components/entrepreneurdialog/entrepreneurdialog.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +70,9 @@ import { AdmindialogComponent } from './components/admindialog/admindialog.compo
     UserviewComponent,
     ServicesliderComponent,
     AdmindialogComponent,
+    EntrepreneursComponent,
+    EntrepreneucardComponent,
+    EntrepreneurdialogComponent,
   ],
   imports: [
     BrowserModule,

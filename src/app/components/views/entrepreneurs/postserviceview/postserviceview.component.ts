@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostserviceviewComponent implements OnInit {
 
+  completed = false;
   constructor() { }
+
+  
+  completeStep(){
+    this.completed = true;
+  }
 
   ngOnInit(): void {
   }
