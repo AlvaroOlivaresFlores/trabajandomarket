@@ -1,80 +1,90 @@
 <div class="container">
   <mat-horizontal-stepper linear [labelPosition]="'bottom'">
-    <mat-step [editable]="true" [completed]="completed">
-      <ng-template matStepLabel>
-        <p>Detalle del servicio</p>
-      </ng-template>
-      <div class="row center-xs">
-        <form class="form">
-          <div class="col">
-            <mat-form-field appearance="fill" class="full-width">
-              <mat-label>Nombre del servicio</mat-label>
-              <input matInput placeholder="Ej. Programacion Web" />
-            </mat-form-field>
+    <div class="flex">
+      <div>
+        <mat-step [editable]="true">
+          <ng-template matStepLabel>
+            <p>Detalle del servicio</p>
+          </ng-template>
+          <div class="row center-xs">
+            <form class="form">
+              <div class="col">
+                <mat-form-field appearance="fill" class="full-width">
+                  <mat-label>Nombre del servicio</mat-label>
+                  <input matInput placeholder="Ej. Programacion Web" />
+                </mat-form-field>
+              </div>
+              <div class="col">
+                <mat-form-field appearance="fill" class="full-width">
+                  <mat-label>Descripcion</mat-label>
+                  <textarea matInput placeholder="Ej. Realizare.."></textarea>
+                </mat-form-field>
+              </div>
+              <div class="col">
+                <mat-form-field appearance="fill" class="full-width">
+                  <mat-label>Insertar precio</mat-label>
+                  <input matInput placeholder="Ej. 510" />
+                </mat-form-field>
+              </div>
+            </form>
           </div>
-          <div class="col">
-            <mat-form-field appearance="fill" class="full-width">
-              <mat-label>Descripcion</mat-label>
-              <textarea matInput placeholder="Ej. Realizare.."></textarea>
-            </mat-form-field>
+          <div class="row center-xs">
+            <button mat-button matStepperNext>Siguiente</button>
           </div>
-          <div class="col">
-            <mat-form-field appearance="fill" class="full-width">
-              <mat-label>Insertar precio</mat-label>
-              <input matInput placeholder="Ej. 510" />
-            </mat-form-field>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>
+            <p>Publicar Imagen (opcional)</p>
+          </ng-template>
+          <div class="row center-xs">
+            <mat-card class="card">
+              <mat-card-header>
+                <mat-icon aria-hidden="false" aria-label="icon"
+                  >imagen</mat-icon
+                >
+                <mat-card-title>Insertar imagen</mat-card-title>
+              </mat-card-header>
+              <img
+                mat-card-image
+                src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                alt="Photo"
+              />
+              <mat-card-actions class="card">
+                <button mat-button>
+                  <mat-icon aria-hidden="false" aria-label="icon"
+                    >upload</mat-icon
+                  >
+                  Subir Imagen
+                </button>
+                <button mat-button>
+                  <mat-icon aria-hidden="false" aria-label="icon"
+                    >delete</mat-icon
+                  >
+                  Eliminar Imagen
+                </button>
+              </mat-card-actions>
+            </mat-card>
+
+            <div class="col-xs-12">
+              <button mat-button matStepperPrevious>Atras</button>
+              <button mat-button matStepperNext>Siguiente</button>
+            </div>
           </div>
-        </form>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>
+            <p>Confrimar publicacion</p>
+          </ng-template>
+          <div class="row center-xs">
+            <div class="col-xs-12">
+              <p>¿Esta seguro que desea continuar?</p>
+              <mat-spinner style="margin: auto;"></mat-spinner>
+              <button mat-button matStepperPrevious>Atras</button>
+              <button mat-button>Completar</button>
+            </div>
+          </div>
+        </mat-step>
       </div>
-      <div class="row center-xs">
-        <button mat-button (click)="completeStep()">Completado</button>
-        <button mat-button matStepperNext>Siguiente</button>
-      </div>
-    </mat-step>
-    <mat-step>
-      <ng-template matStepLabel>
-        <p>Publicar Imagen (opcional)</p>
-      </ng-template>
-      <div class="row center-xs">
-        <div class="col-xs-12">
-          <mat-card class="card">
-            <mat-card-header>
-              <div mat-card-avatar class="header-image"></div>
-              <mat-icon aria-hidden="false" aria-label="icon">imagen</mat-icon>
-              <mat-card-title>Insertar imagen</mat-card-title>
-              <mat-card-subtitle>servicio</mat-card-subtitle>
-            </mat-card-header>
-            <img
-              mat-card-image
-              src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-              alt="Photo"
-            />
-            <mat-card-actions>
-              <mat-icon aria-hidden="false" aria-label="icon">upload</mat-icon>
-              <button mat-button>Subir Imagen</button>
-              <mat-icon aria-hidden="false" aria-label="icon">delete</mat-icon>
-              <button mat-button>Eliminar Imagen</button>
-            </mat-card-actions>
-          </mat-card>
-        </div>
-        <div class="col-xs-12">
-          <button mat-button matStepperPrevious>Atras</button>
-          <button mat-button matStepperNext>Siguiente</button>
-        </div>
-      </div>
-    </mat-step>
-    <mat-step>
-      <ng-template matStepLabel>
-        <p>Confrimar publicacion</p>
-      </ng-template>
-      <div class="row center-xs">
-        <div class="col-xs-12">
-          <p>¿Esta seguro que desea continuar?</p>
-        </div>
-        <mat-spinner></mat-spinner>
-        <button mat-button matStepperPrevious>Atras</button>
-        <button mat-button>Completar</button>
-      </div>
-    </mat-step>
+    </div>
   </mat-horizontal-stepper>
 </div>

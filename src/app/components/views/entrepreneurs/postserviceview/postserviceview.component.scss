@@ -1,4 +1,10 @@
 .mat-form-field {
-    width: 100%;
-    width: 400px;
+  width: 100%;
+  width: 400px;
+}
+.card {
+  max-width: 320px;
+}
+mat-horizontal-stepper {
+  height: 600px;
 }
