@@ -13,9 +13,9 @@ export class AdmindialogComponent implements OnInit {
   ngOnInit(): void {
   }
   openSnackBar() {
-    this._snackBar.open('Usuario bloqueado', 'OK',{panelClass: ['color1']});
+    this._snackBar.open('Usuario bloqueado', 'OK',{panelClass: ['color1'],duration: 1500});
   }
   openSnackBar2() {
-    this._snackBar.open('No bloqueaste este usuario', 'OK',{panelClass: ['color2']});
+    this._snackBar.open('No bloqueaste este usuario', 'OK',{panelClass: ['color2'],duration: 1500});
   }
 }
