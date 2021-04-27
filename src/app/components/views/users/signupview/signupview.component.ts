@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./signupview.component.scss']
 })
 export class SignupviewComponent implements OnInit {
-
+  hide = true;
   constructor() { }
 
   ngOnInit(): void {
