@@ -1,1 +1,22 @@
-<p>entrepreneurhomeview works!</p>
+<div class="">
+  <div class="row">
+    <div class="col-xs-12">
+      <mat-toolbar class="toolbar-size">
+        <nav mat-tab-nav-bar>
+          <a
+            mat-tab-link
+            *ngFor="let link of navLinks"
+            [routerLink]="link.path"
+            routerLinkActive
+            #rla="routerLinkActive"
+            [active]="rla.isActive"
+          >
+            {{ link.label }}
+          </a>
+        </nav>
+        <span class="spacer"></span>
+      </mat-toolbar>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

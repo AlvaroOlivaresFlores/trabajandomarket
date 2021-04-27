@@ -4,6 +4,7 @@ import { AdmindashboardviewComponent } from './components/views/admin/admindashb
 import { AdminviewComponent } from './components/views/admin/adminview/adminview.component';
 import { LoginadminviewComponent } from './components/views/admin/loginadminview/loginadminview.component';
 import { EntrepreneurhomeviewComponent } from './components/views/entrepreneurs/entrepreneurhomeview/entrepreneurhomeview.component';
+import { EntrepreneursComponent } from './components/views/entrepreneurs/entrepreneurs/entrepreneurs.component';
 import { EntrepreneurviewComponent } from './components/views/entrepreneurs/entrepreneurview/entrepreneurview.component';
 import { MyservicesviewComponent } from './components/views/entrepreneurs/myservicesview/myservicesview.component';
 import { PostserviceviewComponent } from './components/views/entrepreneurs/postserviceview/postserviceview.component';
@@ -33,18 +34,13 @@ const routes: Routes = [
       { path: 'services', component: ServicesviewComponent },
       { path: 'hiredservices', component: HiredservicesviewComponent },
       { path: 'servicesrequest', component: ServicesrequestviewComponent },
+      { path: 'entrepreneur', component: EntrepreneursComponent },
       {
-        path: 'entrepreneur',
-        component: EntrepreneurviewComponent,
+        path: 'dashboard',
+        component: EntrepreneurhomeviewComponent,
         children: [
-          {
-            path: 'home',
-            component: EntrepreneurhomeviewComponent,
-            children: [
-              { path: 'postservice', component: PostserviceviewComponent },
-              { path: 'myservices', component: MyservicesviewComponent },
-            ],
-          },
+          { path: 'myservices', component: MyservicesviewComponent },
+          { path: 'postservices', component: PostserviceviewComponent },
         ],
       },
     ],
