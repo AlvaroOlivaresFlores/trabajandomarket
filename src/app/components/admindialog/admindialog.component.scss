@@ -1,0 +1,13 @@
+::ng-deep snack-bar-container.color1{
+  color: white;
+  .mat-simple-snackbar-action {
+    color: rgba(41, 172, 248, 0.568);
+  }
+}
+
+::ng-deep snack-bar-container.color2{
+    color: white;
+    .mat-simple-snackbar-action {
+        color: rgba(41, 172, 248, 0.568);
+    }
+  }

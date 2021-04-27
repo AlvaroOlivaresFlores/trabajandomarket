@@ -1,8 +1,5 @@
-
 <mat-toolbar class="navbar" color="primary">
-  <button routerLink="/adminlogin" mat-button aria-label="home">
-    <span class="title">Trabajando Market</span>
-  </button>
+  <span>Trabajando Market</span>
   <span class="spacer"></span>
 </mat-toolbar>
 
@@ -22,12 +19,12 @@
           </div>
           <hr />
           <div class="container1">
-            <mat-form-field  appearance="fill" class="name">
+            <mat-form-field appearance="fill" class="name">
               <mat-label>Nombre</mat-label>
               <input matInput type="string" class="input" />
               <mat-icon matSuffix>account_circle</mat-icon>
             </mat-form-field>
-          
+
             <mat-form-field appearance="fill" class="pass">
               <mat-label>Clave</mat-label>
               <input matInput [type]="hide ? 'password' : 'text'" />
@@ -38,13 +35,17 @@
                 [attr.aria-label]="'Hide password'"
                 [attr.aria-pressed]="hide"
               >
-                <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+                <mat-icon>{{
+                  hide ? "visibility_off" : "visibility"
+                }}</mat-icon>
               </button>
             </mat-form-field>
           </div>
-          <mat-checkbox color="primary" class="check">Recordar contraseña</mat-checkbox>
+          <mat-checkbox color="primary" class="check"
+            >Recordar contraseña</mat-checkbox
+          >
           <mat-card-actions>
-            <button routerLink='/admin/dashboard' mat-button class="btn">
+            <button routerLink="/admin/dashboard" mat-button class="btn">
               Iniciar Sesion
             </button>
           </mat-card-actions>
