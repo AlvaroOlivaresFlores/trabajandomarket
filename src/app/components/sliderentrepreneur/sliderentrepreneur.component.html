@@ -1,10 +1,11 @@
 <swiper
-  [slidesPerView]="4.2"
+  [spaceBetween]="10"
+  [slidesPerView]="3"
   [centeredSlides]="false"
   [navigation]="true"
 >
   <ng-template
-    *ngFor="let slide of [].constructor(10); index as i"
+    *ngFor="let slide of [].constructor(5); index as i"
     swiperSlide
     let-data
   >
@@ -14,7 +15,7 @@
       [class.bg-yellow]="data.isNext"
       [class.bg-blue]="data.isPrev"
     >
-      <app-servicecard></app-servicecard>
+      <app-entrepreneucard></app-entrepreneucard>
     </div>
   </ng-template>
 </swiper>
