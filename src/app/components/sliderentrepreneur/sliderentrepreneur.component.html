@@ -1,0 +1,21 @@
+<swiper
+  [spaceBetween]="10"
+  [slidesPerView]="3"
+  [centeredSlides]="false"
+  [navigation]="true"
+>
+  <ng-template
+    *ngFor="let slide of [].constructor(5); index as i"
+    swiperSlide
+    let-data
+  >
+    <div
+      class="transition"
+      [class.active-slide]="data.isActive"
+      [class.bg-yellow]="data.isNext"
+      [class.bg-blue]="data.isPrev"
+    >
+      <app-entrepreneucard></app-entrepreneucard>
+    </div>
+  </ng-template>
+</swiper>

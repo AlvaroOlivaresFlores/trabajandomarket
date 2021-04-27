@@ -1,19 +1,10 @@
-<section class="container main">
-  <div class="row around-xs">
-    <div class="col-xs-12 col-md-4" *ngFor="let card of cards; index as i">
-      <app-entrepreneucard
-        [title]="card.title"
-        [subtitle]="card.subtitle"
-        [myprice]="card.myprice"
-        [content]="card.content"
-      ></app-entrepreneucard>
-    </div>
-  </div>
+<section class="container">
+  <app-sliderentrepreneur></app-sliderentrepreneur>
 </section>
 <br />
 <div class="row center-xs color">
   <span>Solicitudes Pendientes</span>
 </div>
 <div class="container">
-    <app-table></app-table>
+  <app-table></app-table>
 </div>

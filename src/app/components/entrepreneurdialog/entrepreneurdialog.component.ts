@@ -19,20 +19,16 @@ export class EntrepreneurdialogComponent implements OnInit {
   readonly separatorKeysCodes: number[] = [ENTER, COMMA];
 
   tipos: Tipo[] = [
-    {name: 'Marketing'},
-    {name: 'Programacion'},
-    {name: 'Diseño'},
+    {name: 'Marketing Digital'}
   ];
+
   add(event: MatChipInputEvent): void {
     const input = event.input;
     const value = event.value;
 
-    // Add our fruit
     if ((value || '').trim()) {
       this.tipos.push({name: value.trim()});
     }
-
-    // Reset the input value
     if (input) {
       input.value = '';
     }

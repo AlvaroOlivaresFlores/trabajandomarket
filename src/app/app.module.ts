@@ -39,6 +39,7 @@ import { AdmindialogComponent } from './components/admindialog/admindialog.compo
 import { EntrepreneursComponent } from './components/views/entrepreneurs/entrepreneurs/entrepreneurs.component';
 import { EntrepreneucardComponent } from './components/entrepreneucard/entrepreneucard.component';
 import { EntrepreneurdialogComponent } from './components/entrepreneurdialog/entrepreneurdialog.component';
+import { SliderentrepreneurComponent } from './components/sliderentrepreneur/sliderentrepreneur.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +74,7 @@ import { EntrepreneurdialogComponent } from './components/entrepreneurdialog/ent
     EntrepreneursComponent,
     EntrepreneucardComponent,
     EntrepreneurdialogComponent,
+    SliderentrepreneurComponent,
   ],
   imports: [
     BrowserModule,

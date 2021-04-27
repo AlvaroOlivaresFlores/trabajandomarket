@@ -6,39 +6,29 @@
       </ng-template>
       <div class="row center-xs">
         <form class="form">
-          <div class="col-xs">
-            <mat-form-field class="full-width">
-              <mat-label>Tipo de servicio</mat-label>
-              <input
-                matInput
-                placeholder="Ex. Programacion"
-                value="Marketing"
-              />
+          <div class="col">
+            <mat-form-field appearance="fill" class="full-width">
+              <mat-label>Nombre del servicio</mat-label>
+              <input matInput placeholder="Ej. Programacion Web" />
             </mat-form-field>
           </div>
           <div class="col">
-            <mat-form-field class="full-width">
-              <mat-label>Detalle del Servicio</mat-label>
-              <textarea matInput placeholder="Ex. Realiza..."></textarea>
-            </mat-form-field>
-          </div>
-          <div class="col">
-            <mat-form-field class="full-width">
+            <mat-form-field appearance="fill" class="full-width">
               <mat-label>Descripcion</mat-label>
-              <textarea matInput placeholder="Ex. Realiza..."></textarea>
+              <textarea matInput placeholder="Ej. Realizare.."></textarea>
             </mat-form-field>
           </div>
           <div class="col">
-            <mat-form-field class="full-width">
+            <mat-form-field appearance="fill" class="full-width">
               <mat-label>Insertar precio</mat-label>
-              <input matInput placeholder="Ex. 510$" value="0$" />
+              <input matInput placeholder="Ej. 510" />
             </mat-form-field>
           </div>
         </form>
-        <div class="col-xs-12">
-          <button mat-button (click)="completeStep()">Completado</button>
-          <button mat-button matStepperNext>Siguiente</button>
-        </div>
+      </div>
+      <div class="row center-xs">
+        <button mat-button (click)="completeStep()">Completado</button>
+        <button mat-button matStepperNext>Siguiente</button>
       </div>
     </mat-step>
     <mat-step>
