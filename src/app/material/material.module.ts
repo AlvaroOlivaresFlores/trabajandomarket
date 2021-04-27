@@ -16,8 +16,11 @@ import { MatRippleModule } from '@angular/material/core';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import {MatTabsModule} from '@angular/material/tabs';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatStepperModule } from '@angular/material/stepper';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatChipsModule} from '@angular/material/chips';
 
 @NgModule({
   declarations: [],
@@ -40,6 +43,10 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatSortModule,
     MatTabsModule,
     MatSnackBarModule,
+    MatStepperModule,
+    MatProgressSpinnerModule,
+    MatChipsModule,
+    
   ],
   exports: [
     MatToolbarModule,
@@ -59,6 +66,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatSortModule,
     MatTabsModule,
     MatSnackBarModule,
+    MatStepperModule,
+    MatProgressSpinnerModule,
+    MatChipsModule,
   ],
 })
 export class MaterialModule {}
