@@ -1,0 +1,8 @@
+export enum Category {
+    WEBDEVELOPMENT,
+    DIGITALMARKETING,
+    GRAPHICDESING,
+    VIDEOEDITING,
+    NONE = "NONE",
+}
+

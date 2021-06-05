@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Category } from 'src/app/models/category.enum';
+import { Service } from 'src/app/models/service';
+import { ServicesService } from 'src/app/services/services.service';
+
 
 @Component({
   selector: 'app-hireserviceview',
@@ -7,9 +11,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HireserviceviewComponent implements OnInit {
 
-  constructor() { }
+  service: Service
+
+  constructor(private selectedService: ServicesService) { 
+    this.service = new Service(0,"","",0,0,Category.NONE,["",""],false);
+  }
 
   ngOnInit(): void {
+    this.service = this.selectedService.getServiceSelected();
   }
 
 }
