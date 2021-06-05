@@ -1,0 +1,18 @@
+export enum Region {
+    ARICAPARINACOTA,
+    ANTOFAGASTA,
+    TARAPACA,
+    ATACAMA,
+    COQUIMBO,
+    VALPARAISO,
+    REGIONMETROPOLITANA,
+    OHIGGINS,
+    MAULE,
+    ÑUBLE,
+    BIOBIO,
+    ARAUCANIA,
+    LOSLAGOS,
+    LOSRIOS,
+    AYSEN,
+    MAGALLANES
+}

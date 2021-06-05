@@ -40,6 +40,7 @@ import { EntrepreneursComponent } from './components/views/entrepreneurs/entrepr
 import { EntrepreneucardComponent } from './components/entrepreneucard/entrepreneucard.component';
 import { EntrepreneurdialogComponent } from './components/entrepreneurdialog/entrepreneurdialog.component';
 import { SliderentrepreneurComponent } from './components/sliderentrepreneur/sliderentrepreneur.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -81,7 +82,8 @@ import { SliderentrepreneurComponent } from './components/sliderentrepreneur/sli
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    SwiperModule
+    SwiperModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

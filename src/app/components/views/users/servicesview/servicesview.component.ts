@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Service } from 'src/app/models/service';
+import { ServicesService } from 'src/app/services/services.service';
 
 @Component({
   selector: 'app-servicesview',
@@ -6,80 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servicesview.component.scss'],
 })
 export class ServicesviewComponent implements OnInit {
-  constructor() {}
+  public services:Array<Service> = [];
 
-  ngOnInit(): void {}
-  services = [
-    {
-      name: 'Servicio 1',
-      description: '',
-      price: 2000,
-      category: 'Tecnologia',
-    },
-    {
-      name: 'Servicio 2',
-      description: '',
-      price: 200000,
-      category: 'Tecnologia',
-    },
-    {
-      name: 'Servicio 3',
-      description: '',
-      price: 10000,
-      category: 'Tecnologia',
-    },
-    {
-      name: 'Servicio 4',
-      description: '',
-      price: 10000,
-      category: 'Tecnologia',
-    },
-    {
-      name: 'Servicio 5',
-      description: '',
-      price: 2000,
-      category: 'Tecnologia',
-    },
-    {
-      name: 'Servicio 6',
-      description: '',
-      price: 200000,
-      category: 'Tecnologia',
-    },
-    {
-      name: 'Servicio 7',
-      description: '',
-      price: 10000,
-      category: 'Tecnologia',
-    },
-    {
-      name: 'Servicio 8',
-      description: '',
-      price: 10000,
-      category: 'Tecnologia',
-    },    {
-      name: 'Servicio 9',
-      description: '',
-      price: 2000,
-      category: 'Tecnologia',
-    },
-    {
-      name: 'Servicio 10',
-      description: '',
-      price: 200000,
-      category: 'Tecnologia',
-    },
-    {
-      name: 'Servicio 11',
-      description: '',
-      price: 10000,
-      category: 'Tecnologia',
-    },
-    {
-      name: 'Servicio 12',
-      description: '',
-      price: 10000,
-      category: 'Tecnologia',
-    },
-  ];
+  constructor(private service : ServicesService) {}
+
+  ngOnInit(): void {
+    this.loadServices();
+  }
+
+  async loadServices() {
+    this.services = await this.service.getServices().toPromise();
+  }
 }
