@@ -14,7 +14,7 @@ export class HireserviceviewComponent implements OnInit {
   service: Service
 
   constructor(private selectedService: ServicesService) { 
-    this.service = new Service(0,"","",0,0,Category.NONE,["",""],false,0);
+    this.service = new Service("","",0,0,Category.NONE,["",""],false,0);
   }
 
   ngOnInit(): void {
