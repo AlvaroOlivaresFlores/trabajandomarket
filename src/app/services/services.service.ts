@@ -11,7 +11,7 @@ export class ServicesService {
   serviceSelected: Service;
 
   constructor(private http: HttpClient) { 
-    this.serviceSelected = new Service(0,"","",0,0,Category.NONE,["",""],false,0);
+    this.serviceSelected = new Service("","",0,0,Category.NONE,["",""],false,0);
   }
 
   getServices(){

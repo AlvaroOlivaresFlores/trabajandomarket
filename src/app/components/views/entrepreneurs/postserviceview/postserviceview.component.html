@@ -11,25 +11,83 @@
               <div class="col">
                 <mat-form-field appearance="fill" class="full-width">
                   <mat-label>Nombre del servicio</mat-label>
-                  <input matInput placeholder="Ej. Programacion Web" />
+                  <input
+                    [(ngModel)]="name"
+                    name="name"
+                    required
+                    matInput
+                    placeholder="Ej. Programacion Web"
+                  />
                 </mat-form-field>
               </div>
               <div class="col">
                 <mat-form-field appearance="fill" class="full-width">
                   <mat-label>Descripcion</mat-label>
-                  <textarea matInput placeholder="Ej. Realizare.."></textarea>
+                  <textarea
+                    [(ngModel)]="description"
+                    name="description"
+                    required
+                    matInput
+                    placeholder="Ej. Realizare.."
+                  ></textarea>
                 </mat-form-field>
               </div>
               <div class="col">
                 <mat-form-field appearance="fill" class="full-width">
                   <mat-label>Insertar precio</mat-label>
-                  <input matInput placeholder="Ej. 510" />
+                  <input
+                    [(ngModel)]="price"
+                    name="price"
+                    required
+                    matInput
+                    placeholder="Ej. 510"
+                  />
+                </mat-form-field>
+              </div>
+              <div class="col">
+                <mat-form-field
+                  class="margen-mat-form-field1"
+                  appearance="fill"
+                >
+                  <mat-label>Categoria</mat-label>
+                  <mat-select required [(ngModel)]="category" name="category">
+                    <mat-option value="WEBDEVELOPMENT"
+                      >Desarrollo Web</mat-option
+                    >
+                    <mat-option value="DIGITALMARKETING"
+                      >Marketing Digital</mat-option
+                    >
+                    <mat-option value="GRAPHICDESING"
+                      >Diseño Grafico</mat-option
+                    >
+                    <mat-option value="VIDEOEDITING"
+                      >Edicion de Video</mat-option
+                    >
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <div class="col">
+                <mat-form-field appearance="fill" class="full-width">
+                  <mat-label>Plazo de entrega</mat-label>
+                  <input
+                    [(ngModel)]="deliveryTerm"
+                    name="deliveryTerm"
+                    required
+                    matInput
+                    placeholder="Ej. 5"
+                  />
                 </mat-form-field>
               </div>
             </form>
           </div>
           <div class="row center-xs">
-            <button mat-button matStepperNext>Siguiente</button>
+            <button
+              mat-raised-button
+              color="primary"
+              matStepperNext
+            >
+              Siguiente
+            </button>
           </div>
         </mat-step>
         <mat-step>
@@ -44,10 +102,7 @@
                 >
                 <mat-card-title>Insertar imagen</mat-card-title>
               </mat-card-header>
-              <img
-                mat-card-image
-                src="http://via.placeholder.com/300x300"
-              />
+              <img mat-card-image src="http://via.placeholder.com/300x300" />
               <mat-card-actions class="card">
                 <button mat-button>
                   <mat-icon aria-hidden="false" aria-label="icon"
@@ -77,9 +132,9 @@
           <div class="row center-xs">
             <div class="col-xs-12">
               <p>¿Esta seguro que desea continuar?</p>
-              <mat-spinner style="margin: auto;"></mat-spinner>
+              <mat-spinner style="margin: auto"></mat-spinner>
               <button mat-button matStepperPrevious>Atras</button>
-              <button mat-button>Completar</button>
+              <button mat-button (click)="addService()">Completar</button>
             </div>
           </div>
         </mat-step>

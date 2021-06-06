@@ -85,7 +85,8 @@ import { EntrepreneurtableComponent } from './components/entrepreneurtable/entre
     BrowserAnimationsModule,
     MaterialModule,
     SwiperModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
