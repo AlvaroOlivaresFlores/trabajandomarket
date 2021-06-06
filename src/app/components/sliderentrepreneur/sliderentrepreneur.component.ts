@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Service } from 'src/app/models/service';
+import { ServicesService } from 'src/app/services/services.service';
 import SwiperCore, {
   Navigation,
   Pagination,
@@ -10,6 +12,7 @@ import SwiperCore, {
   Thumbs,
   Controller,
 } from 'swiper/core';
+import { MyservicesviewComponent } from '../views/entrepreneurs/myservicesview/myservicesview.component';
 
 // install Swiper components
 SwiperCore.use([
@@ -29,7 +32,15 @@ SwiperCore.use([
   styleUrls: ['./sliderentrepreneur.component.scss'],
 })
 export class SliderentrepreneurComponent implements OnInit {
-  constructor() {}
+  public services: Array<Service> = [];
+  public myServices: Array<Service> = [];
 
-  ngOnInit(): void {}
+  constructor(private service: ServicesService) {}
+
+  ngOnInit(): void {
+    this.loadServices();
+  }
+  async loadServices() {
+    this.services = await this.service.getServices().toPromise();
+  }
 }

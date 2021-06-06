@@ -26,7 +26,6 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatMomentDateModule} from '@angular/material-moment-adapter';
 
 
-
 @NgModule({
   declarations: [],
   imports: [
@@ -85,7 +84,6 @@ import {MatMomentDateModule} from '@angular/material-moment-adapter';
     MatCheckboxModule,
     MatDatepickerModule,
     MatMomentDateModule
-
   ],
 })
 export class MaterialModule {}
