@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 import { SwiperComponent } from 'swiper/angular';
 
 import SwiperCore, {
@@ -31,11 +31,16 @@ SwiperCore.use([
   templateUrl: './slider.component.html',
 })
 export class SliderComponent {
+  @Input() images: Array<string>
+
   @ViewChild('swiperRef', { static: false }) swiperRef?: SwiperComponent;
 
   thumbsSwiper: any;
   setThumbsSwiper(swiper: any) {
     this.thumbsSwiper = swiper;
+  }
+  constructor() {
+    this.images = []
   }
 
 }

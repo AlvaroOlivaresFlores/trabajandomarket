@@ -13,22 +13,15 @@
         <mat-card-header>
           <div mat-card-avatar class="example-header-image"></div>
           <mat-card-title>Nombre Emprendedor</mat-card-title>
-          <mat-card-subtitle>{{service.category}}</mat-card-subtitle>
+          <mat-card-subtitle>{{categoryStr()}}</mat-card-subtitle>
         </mat-card-header>
         <div class="divimg">
-          <app-slider class="slider"></app-slider>
+          <app-slider class="slider" [images]="service.images"></app-slider>
         </div>
         <div class="servicedescription">
           <h1>Descripción</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-            doloribus aperiam quo reprehenderit sequi! Sapiente fuga in illo
-            nulla consequuntur, soluta distinctio consequatur, inventore rem
-            harum voluptas beatae reprehenderit recusandae? Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Cum doloribus aperiam quo
-            reprehenderit sequi! Sapiente fuga in illo nulla consequuntur,
-            soluta distinctio consequatur, inventore rem harum voluptas beatae
-            reprehenderit recusandae?
+            {{service.description}}
           </p>
         </div>
       </mat-card>
@@ -45,7 +38,7 @@
                   <h2 class="mid"><mat-icon>category</mat-icon> Categoria:</h2>
                 </div>
                 <div class="col">
-                  <h2>Diseño Web</h2>
+                  <h2>{{categoryStr()}}</h2>
                 </div>
               </div>
               <div class="row between-xs middle-xs">
@@ -55,7 +48,7 @@
                   </h2>
                 </div>
                 <div class="col">
-                  <h2>2 dias</h2>
+                  <h2>{{service.deliveryTerm}} Dias</h2>
                 </div>
               </div>
               <div class="row between-xs middle-xs">
@@ -65,7 +58,7 @@
                   </h2>
                 </div>
                 <div class="col">
-                  <h2 class="mid">{{service.rating }} <mat-icon>star</mat-icon></h2>
+                  <h2 class="mid">{{service.rating}} <mat-icon>star</mat-icon></h2>
                 </div>
               </div>
               <div class="row between-xs middle-xs">
@@ -73,7 +66,7 @@
                   <h2 class="mid"><mat-icon>payments</mat-icon> Precio:</h2>
                 </div>
                 <div class="col">
-                  <h2>$ 2000</h2>
+                  <h2>{{service.price}} CLP</h2>
                 </div>
               </div>
               <button class="btn" mat-raised-button color="primary">

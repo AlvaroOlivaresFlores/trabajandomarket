@@ -14,11 +14,25 @@ export class HireserviceviewComponent implements OnInit {
   service: Service
 
   constructor(private selectedService: ServicesService) { 
-    this.service = new Service(0,"","",0,0,Category.NONE,["",""],false);
+    this.service = new Service(0,"","",0,0,Category.NONE,["",""],false,0);
   }
 
   ngOnInit(): void {
     this.service = this.selectedService.getServiceSelected();
+  }
+
+  categoryStr(): string {
+    if (this.service.category.toString() === "DIGITALMARKETING") {
+      return "Marketing Digital"
+    } else if (this.service.category.toString() === "GRAPHICDESING") {
+      return "Diseño Grafico"
+    } else if (this.service.category.toString() === "VIDEOEDITING") {
+      return "Edicion de Video"
+    } else if (this.service.category.toString() === "WEBDEVELOPMENT") {
+      return "Desarollo Web"
+    } else {
+      return "NONE"
+    }
   }
 
 }
