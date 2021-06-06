@@ -1,20 +1,46 @@
+import { Region } from './region.enum';
 import { Service } from './service';
-import { User } from './user'
+import { User } from './user';
 
 export class Entrepreneur extends User {
-    private _services: Array<Service>;
-    private _profilePicture: string;
-    private _description: string;
+  private _services: Array<Number>;
+  private profilePicture: string;
+  private description: string;
 
-    public constructor(id: number, name: string, lastname: string, birthDay: Date, eMail: string, gender: string, region: string, contratedServices: Array<Service>, serices: Array<Service>, profilePicture: string, description: string) {
-        super(id,name,lastname,birthDay,eMail,gender,region,contratedServices);
-        this._services = serices;
-        this._profilePicture = profilePicture;
-        this._description = description;
-    }
-
-
-    get profilePicture() {return this._profilePicture}
-    get description() {return this._description}
-    get service() {return this._services}
+  public constructor(
+    
+    name: string,
+    lastname: string,
+    birthDay: Date,
+    eMail: string,
+    gender: string,
+    region: Region,
+    contratedServices: Array<Service>,
+    services: Array<Number>,
+    profilePicture: string,
+    description: string
+  ) {
+    super(
+      
+      name,
+      lastname,
+      birthDay,
+      eMail,
+      gender,
+      region,
+      contratedServices
+    );
+    this._services = services;
+    this.profilePicture = profilePicture;
+    this.description = description;
+  }
+  get services() {
+    return this._services;
+  }
+  get _profilePicture() {
+    return this.profilePicture;
+  }
+  get _description() {
+    return this.description;
+  }
 }

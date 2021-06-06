@@ -89,7 +89,8 @@ import { AdmindialogentrepreneurComponent } from './components/admindialogentrep
     BrowserAnimationsModule,
     MaterialModule,
     SwiperModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
