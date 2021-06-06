@@ -495,6 +495,16 @@
       "gender": "Male",
       "region": "ATACAMA",
       "contratedServices": []
+    },
+    {
+      "id": 13,
+      "name": "xNefyu",
+      "lastname": "asdasd",
+      "birthDay": "1990-01-01T03:00:00.000Z",
+      "eMail": "asdasdasd",
+      "gender": "Female",
+      "region": "TARAPACA",
+      "contratedServices": []
     }
   ],
   "entrepreneurs": [
