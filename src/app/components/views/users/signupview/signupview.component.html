@@ -35,6 +35,30 @@
             <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
           </button>
         </mat-form-field>
+        <mat-form-field class = "margen-mat-form-field1" appearance="outline">
+          <mat-label>Fecha de Nacimiento</mat-label>
+          <input matInput [matDatepicker]="picker">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field class="margen-mat-form-field1" appearance="outline">
+          <mat-label>Genero</mat-label>
+          <mat-select>
+            <mat-option value="option1">Masculino</mat-option>
+            <mat-option value="option2">Femenino</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="margen-mat-form-field1" appearance="outline">
+          <mat-label>Region</mat-label>
+          <mat-select>
+            <mat-option value="option1">Option 1</mat-option>
+            <mat-option value="option2">Option 2</mat-option>
+            <mat-option value="option3">Option 3</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        
+        
         <section class="example-section">
           <mat-checkbox class="example-margin" color="primary">
             He leido y acepto las <a href="">Condiciones del servicio</a> <br> y la <a href="">Politica de privacidad</a> de Trabajando Market

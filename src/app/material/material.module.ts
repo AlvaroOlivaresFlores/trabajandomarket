@@ -22,6 +22,9 @@ import { MatStepperModule } from '@angular/material/stepper';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatMomentDateModule} from '@angular/material-moment-adapter';
+
 
 
 @NgModule({
@@ -45,12 +48,14 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatSortModule,
     MatTabsModule,
     MatSnackBarModule,
-
+    
     MatStepperModule,
     MatProgressSpinnerModule,
     MatChipsModule,
 
     MatCheckboxModule,
+    MatDatepickerModule,
+    MatMomentDateModule,
 
   ],
   exports: [
@@ -71,12 +76,15 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatSortModule,
     MatTabsModule,
     MatSnackBarModule,
+    
 
     MatStepperModule,
     MatProgressSpinnerModule,
     MatChipsModule,
 
     MatCheckboxModule,
+    MatDatepickerModule,
+    MatMomentDateModule
 
   ],
 })

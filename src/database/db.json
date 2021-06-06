@@ -568,7 +568,9 @@
                 17,
                 18
             ],
-            "profile_picture": [],
+            "profile_picture": [
+                "https://via.placeholder.com/40x40"
+            ],
             "description": "Activities w oth sports & athletics played as a team or grp"
         }
     ]
