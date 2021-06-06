@@ -387,7 +387,7 @@
       "id": 4,
       "name": "Chaunce",
       "last_name": "M'Quharg",
-      "birth_date": "9/15/2015 2015-09-15T04:00:00.000Z",
+      "birth_date": "2015-09-15T04:00:00.000Z",
       "email": "cmquharg3@mysql.com",
       "gender": "Male",
       "region": "TARAPACA",
@@ -495,16 +495,6 @@
       "gender": "Male",
       "region": "ATACAMA",
       "contratedServices": []
-    },
-    {
-      "id": 13,
-      "name": "xNefyu",
-      "lastname": "asdasd",
-      "birthDay": "1990-01-01T03:00:00.000Z",
-      "eMail": "asdasdasd",
-      "gender": "Female",
-      "region": "TARAPACA",
-      "contratedServices": []
     }
   ],
   "entrepreneurs": [
@@ -554,6 +544,43 @@
         "https://via.placeholder.com/40x40"
       ],
       "description": "Activities w oth sports & athletics played as a team or grp"
+    }
+  ],
+  "reports": [
+    {
+      "id": 1,
+      "date": "3/24/2020",
+      "users": 9,
+      "entres": 2,
+      "porc": 0.62
+    },
+    {
+      "id": 2,
+      "date": "12/31/2020",
+      "users": 8,
+      "entres": 4,
+      "porc": 0.48
+    },
+    {
+      "id": 3,
+      "date": "12/15/2020",
+      "users": 10,
+      "entres": 5,
+      "porc": 0.88
+    },
+    {
+      "id": 4,
+      "date": "3/1/2021",
+      "users": 7,
+      "entres": 1,
+      "porc": 0.5
+    },
+    {
+      "id": 5,
+      "date": "4/14/2021",
+      "users": 9,
+      "entres": 5,
+      "porc": 0.58
     }
   ]
 }
