@@ -4,13 +4,13 @@ export class User {
     protected readonly _id: number;
     protected _name: string;
     protected _lastname: string;
-    protected _birthDay: Date;
+    protected _birthDay: string;
     protected _eMail: string;
     protected _gender: string;
     protected _region: string;
     protected _contratedServices: Array<Service>;
 
-    public constructor(id: number, name: string, lastname: string, birthDay: Date, eMail: string, gender: string, region: string, contratedServices: Array<Service>) {
+    public constructor(id: number, name: string, lastname: string, birthDay: string, eMail: string, gender: string, region: string, contratedServices: Array<Service>) {
         this._id = id;
         this._name = name;
         this._lastname = lastname;
