@@ -78,8 +78,4 @@ export class AdmindashboardviewComponent implements OnInit {
     dialogref.afterClosed().subscribe(result => {this.loadServices()});
   }
 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> master

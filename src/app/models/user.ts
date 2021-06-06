@@ -29,8 +29,4 @@ export class User {
     get gender() {return this._gender}
     get region() {return this._region}
 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> master
