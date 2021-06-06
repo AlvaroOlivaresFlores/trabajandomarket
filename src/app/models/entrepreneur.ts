@@ -1,3 +1,4 @@
+import { Region } from './region.enum';
 import { Service } from './service';
 import { User } from './user';
 
@@ -7,20 +8,20 @@ export class Entrepreneur extends User {
   private description: string;
 
   public constructor(
-    id: number,
+    
     name: string,
     lastname: string,
-    birthDay: string,
+    birthDay: Date,
     eMail: string,
     gender: string,
-    region: string,
+    region: Region,
     contratedServices: Array<Service>,
     services: Array<Number>,
     profilePicture: string,
     description: string
   ) {
     super(
-      id,
+      
       name,
       lastname,
       birthDay,

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Entrepreneur } from '../models/entrepreneur';
+import { Region } from '../models/region.enum';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ export class EntrepreneurService {
  
   entrepreneurSelected: Entrepreneur;
   constructor(private http: HttpClient) { 
-    this.entrepreneurSelected = new Entrepreneur(0,"","","","","","",[],[],"","");
+    this.entrepreneurSelected = new Entrepreneur("","",new Date(1990,0,1),"","",Region.REGIONMETROPOLITANA,[],[],"","");
   }
 
   getUsers(){
