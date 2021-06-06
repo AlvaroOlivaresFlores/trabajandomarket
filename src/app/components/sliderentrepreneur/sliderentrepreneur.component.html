@@ -4,8 +4,8 @@
   [centeredSlides]="false"
   [navigation]="true"
 >
-  <ng-template *ngFor="let service of services" swiperSlide let-data>
-    <div *ngIf="(service.name == 'Rank')">
+  <ng-template *ngFor="let service of myServices" swiperSlide let-data>
+    <div>
       <div
         class="transition"
         [class.active-slide]="data.isActive"
