@@ -42,6 +42,8 @@ import { EntrepreneurdialogComponent } from './components/entrepreneurdialog/ent
 import { SliderentrepreneurComponent } from './components/sliderentrepreneur/sliderentrepreneur.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EntrepreneurtableComponent } from './components/entrepreneurtable/entrepreneurtable.component';
+import { AdmindashboardentrepreneurviewComponent } from './components/views/admin/admindashboardentrepreneurview/admindashboardentrepreneurview.component';
+import { AdmindialogentrepreneurComponent } from './components/admindialogentrepreneur/admindialogentrepreneur.component';
 
 @NgModule({
   declarations: [
@@ -78,6 +80,8 @@ import { EntrepreneurtableComponent } from './components/entrepreneurtable/entre
     EntrepreneurdialogComponent,
     SliderentrepreneurComponent,
     EntrepreneurtableComponent,
+    AdmindashboardentrepreneurviewComponent,
+    AdmindialogentrepreneurComponent,
   ],
   imports: [
     BrowserModule,
