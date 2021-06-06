@@ -1,4 +1,3 @@
-import { ThisReceiver } from '@angular/compiler';
 import {
   AfterViewInit,
   Component,
@@ -12,11 +11,13 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { Region } from 'src/app/models/region.enum';
-import { User } from 'src/app/models/user';
+import { Entrepreneur } from 'src/app/models/entrepreneur';
 import { UsersService } from 'src/app/services/users.service';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {MatDialog} from '@angular/material/dialog';
-import { AdmindialogComponent } from 'src/app/components/admindialog/admindialog.component';
+import { AdmindialogentrepreneurComponent } from 'src/app/components/admindialogentrepreneur/admindialogentrepreneur.component';
+import { EntrepreneurService } from 'src/app/services/entrepreneur.service';
+
 
 export interface UserData {
   id: number;
@@ -29,13 +30,13 @@ export interface UserData {
 }
 
 @Component({
-  selector: 'app-admindashboardview',
-  templateUrl: './admindashboardview.component.html',
-  styleUrls: ['./admindashboardview.component.scss'],
+  selector: 'app-admindashboardentrepreneurview',
+  templateUrl: './admindashboardentrepreneurview.component.html',
+  styleUrls: ['./admindashboardentrepreneurview.component.scss'],
 })
-export class AdmindashboardviewComponent implements OnInit {
-  ELEMENT_DATA: User[];
-  dataSource: MatTableDataSource<User>;
+export class AdmindashboardentrepreneurviewComponent implements OnInit {
+  ELEMENT_DATA: Entrepreneur[];
+  dataSource: MatTableDataSource<Entrepreneur>;
   displayedColumns: string[] = [
     'id',
     'name',
@@ -44,6 +45,7 @@ export class AdmindashboardviewComponent implements OnInit {
     'email',
     'gender',
     'region',
+    'services',
     'button'
   ];
   ngOnInit(): void {
@@ -56,21 +58,22 @@ export class AdmindashboardviewComponent implements OnInit {
 
   async loadServices() {
     this.ELEMENT_DATA = await this.userc.getUsers().toPromise();
-    this.dataSource = new MatTableDataSource<User>(this.ELEMENT_DATA);
+    this.dataSource = new MatTableDataSource<Entrepreneur>(this.ELEMENT_DATA);
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
+    
   }
 
   
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-  constructor(private userc: UsersService, public dialog: MatDialog) {
-    this.dataSource=new MatTableDataSource<User>();
+  constructor(private userc: EntrepreneurService, public dialog: MatDialog) {
+    this.dataSource=new MatTableDataSource<Entrepreneur>();
     this.ELEMENT_DATA = [];
   }
 
   openDialog(id:number) {
-    let dialogref=this.dialog.open(AdmindialogComponent,{
+    let dialogref=this.dialog.open(AdmindialogentrepreneurComponent,{
       data:{
         id: id
       }
@@ -78,8 +81,4 @@ export class AdmindashboardviewComponent implements OnInit {
     dialogref.afterClosed().subscribe(result => {this.loadServices()});
   }
 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> master

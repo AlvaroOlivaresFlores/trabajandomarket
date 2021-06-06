@@ -4,7 +4,8 @@
       <div mat-card-image>
         <div class="imgdiv" matRipple routerLink="/home/hireservice">
           <img
-            [src]="img"
+            (click)="changeSelectedService()"
+            [src]="service.images[0]"
             alt="Photo of a Shiba Inu"
           />
         </div>
@@ -15,16 +16,16 @@
         <mat-card-subtitle>{{ categoryStr() }}</mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
-        <p>
-          {{ description }}<br />
-        </p>
-        <span><b>Precio: {{ price }} CLP</b></span>
+        <p>{{ service.description }}<br /></p>
+        <span
+          ><b>Precio: {{ service.price }} CLP</b></span
+        >
       </mat-card-content>
       <mat-divider></mat-divider>
       <mat-card-actions>
         <div class="row middle-xs around-xs">
           <span class="rate">
-            {{ rating }}
+            {{ service.rating }}
             <mat-icon
               class="staricon"
               aria-hidden="false"

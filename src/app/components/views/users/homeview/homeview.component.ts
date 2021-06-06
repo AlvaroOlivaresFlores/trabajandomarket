@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Service } from 'src/app/models/service';
+import { ServicesService } from 'src/app/services/services.service';
 
 @Component({
   selector: 'app-homeview',
@@ -7,24 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeviewComponent implements OnInit {
 
-  constructor() { }
+  public services:Array<Service> = [];
+  public favoriteServices:Array<Service> = [];
+  public lowerPriceServices:Array<Service> = [];
 
-  ngOnInit(): void {
+  constructor(private service : ServicesService) {
+
   }
 
-  mostviewed = [
-    {
-      name: 'service 1'
-    },
-    {
-      name: 'service 2'
-    },
-    {
-      name: 'service 3'
-    },
-    {
-      name: 'service 4'
-    }
-  ] 
+    
+  ngOnInit(): void {
+    this.loadServices();
+  }
+
+  async loadServices() {
+    this.services = await this.service.getServices().toPromise();
+    this.favoriteServices = this.services.sort((a,b)=> (b.rating - a.rating)).slice(0, 10)
+    this.lowerPriceServices = this.services.sort((a,b)=> (a.price - b.price)).slice(0, 10)
+  }
 
 }

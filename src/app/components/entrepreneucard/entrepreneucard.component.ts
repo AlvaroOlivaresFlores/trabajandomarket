@@ -1,4 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Category } from 'src/app/models/category.enum';
+import { Service } from 'src/app/models/service';
+import { ServicesService } from 'src/app/services/services.service';
 
 @Component({
   selector: 'app-entrepreneucard',
@@ -7,19 +10,25 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class EntrepreneucardComponent implements OnInit {
 
-  @Input() title: string;
-  @Input() subtitle: string;
-  @Input() content: string;
-  @Input() link: string;
-  @Input() myprice: string;
-  
-  constructor() { 
-    this.title = 'Service Name';
-    this.myprice = "0";
-    this.link = 'http://placekitten.com/300/300';
-    this.content = 'Service Description';
-    this.subtitle = 'Service Category';
+  constructor(private myServices: ServicesService) { 
+    this.service = new Service(0,"","",0,0,Category.NONE,["",""],false,0);
   }
+
   ngOnInit(): void {
+  }
+  @Input() service: Service;
+
+  categoryStr(): string {
+    if (this.service.category.toString() === "DIGITALMARKETING") {
+      return "Marketing Digital"
+    } else if (this.service.category.toString() === "GRAPHICDESING") {
+      return "Diseño Grafico"
+    } else if (this.service.category.toString() === "VIDEOEDITING") {
+      return "Edicion de Video"
+    } else if (this.service.category.toString() === "WEBDEVELOPMENT") {
+      return "Desarollo Web"
+    } else {
+      return "NONE"
+    }
   }
 }

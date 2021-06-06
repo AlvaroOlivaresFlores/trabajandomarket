@@ -41,6 +41,9 @@ import { EntrepreneucardComponent } from './components/entrepreneucard/entrepren
 import { EntrepreneurdialogComponent } from './components/entrepreneurdialog/entrepreneurdialog.component';
 import { SliderentrepreneurComponent } from './components/sliderentrepreneur/sliderentrepreneur.component';
 import { HttpClientModule } from '@angular/common/http';
+import { EntrepreneurtableComponent } from './components/entrepreneurtable/entrepreneurtable.component';
+import { AdmindashboardentrepreneurviewComponent } from './components/views/admin/admindashboardentrepreneurview/admindashboardentrepreneurview.component';
+import { AdmindialogentrepreneurComponent } from './components/admindialogentrepreneur/admindialogentrepreneur.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +79,9 @@ import { HttpClientModule } from '@angular/common/http';
     EntrepreneucardComponent,
     EntrepreneurdialogComponent,
     SliderentrepreneurComponent,
+    EntrepreneurtableComponent,
+    AdmindashboardentrepreneurviewComponent,
+    AdmindialogentrepreneurComponent,
   ],
   imports: [
     BrowserModule,

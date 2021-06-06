@@ -19,7 +19,7 @@ export class UsersService {
     return this.http.post("http://localhost:3000/users", user);
   }
   editUser(user: User) {
-    return this.http.put("http://localhost:3000/users/"+user.id,user)
+    return this.http.put("http://localhost:3000/users/"+user.id, user)
   }
   deleteUser(id: number){
     return this.http.delete("http://localhost:3000/users/"+id)

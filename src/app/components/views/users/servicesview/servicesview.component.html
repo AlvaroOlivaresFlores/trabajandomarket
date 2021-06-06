@@ -3,12 +3,6 @@
     <div class="row around-xs">
       <div class="box" *ngFor="let service of services">
         <app-servicecard
-          [name]="service.name"
-          [price]="service.price"
-          [img]="service.images[0]"
-          [rating]="service.rating"
-          [description]="service.description"
-          [category]="service.category"
           [service]="service"
         ></app-servicecard>
       </div>

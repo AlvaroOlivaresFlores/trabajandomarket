@@ -9,8 +9,9 @@ export class Service {
     private _category: Category;
     private _images: Array<string>;
     private _status: boolean;
+    private _deliveryTerm: number;
 
-    public constructor(id: number, name: string, description: string, price: number, rating: number, category: Category, images: Array<string>, status: boolean){
+    public constructor(id: number, name: string, description: string, price: number, rating: number, category: Category, images: Array<string>, status: boolean, deliveryTerm: number){
         this._id = id;
         this._name = name;
         this._description = description;
@@ -19,6 +20,7 @@ export class Service {
         this._category = category;
         this._images = images;
         this._status = status;
+        this._deliveryTerm = deliveryTerm;
     }
 
     get id() { return this._id }
@@ -29,5 +31,6 @@ export class Service {
     get category() { return this._category }
     get images() { return this._images }
     get status() { return this._status }
+    get deliveryTerm() { return this._deliveryTerm }
     
 }
