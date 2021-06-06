@@ -533,31 +533,6 @@
       "description": "Activities w oth sports & athletics played as a team or grp"
     },
     {
-      "id": 2,
-      "name": "Wylie",
-      "last_name": "Beavis",
-      "birth_date": "1988-06-16T04:00:00.000Z",
-      "email": "wbeavis1@umn.edu",
-      "gender": "Male",
-      "region": "MAULE",
-      "contracted_services": [
-        15,
-        3,
-        1,
-        9
-      ],
-      "services": [
-        4,
-        6,
-        10,
-        14
-      ],
-      "profile_picture": [
-        "https://via.placeholder.com/40x40"
-      ],
-      "description": "Activities w oth sports & athletics played as a team or grp"
-    },
-    {
       "id": 3,
       "name": "Bernardine",
       "last_name": "Tobin",
@@ -574,29 +549,6 @@
         7,
         9,
         16
-      ],
-      "profile_picture": [
-        "https://via.placeholder.com/40x40"
-      ],
-      "description": "Activities w oth sports & athletics played as a team or grp"
-    },
-    {
-      "id": 4,
-      "name": "Chaunce",
-      "last_name": "M'Quharg",
-      "birth_date": "2015-09-15T04:00:00.000Z",
-      "email": "cmquharg3@mysql.com",
-      "gender": "Male",
-      "region": "TARAPACA",
-      "contracted_services": [],
-      "services": [
-        2,
-        5,
-        8,
-        11,
-        13,
-        17,
-        18
       ],
       "profile_picture": [
         "https://via.placeholder.com/40x40"
