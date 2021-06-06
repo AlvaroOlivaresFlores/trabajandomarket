@@ -1,6 +1,5 @@
-import { ChangeDetectorRef, Component, ViewChild, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, ViewChild, OnInit, Input } from '@angular/core';
 import { Service } from 'src/app/models/service';
-import { ServicesService } from 'src/app/services/services.service';
 import { SwiperComponent } from 'swiper/angular';
 
 
@@ -34,20 +33,14 @@ SwiperCore.use([
 })
 export class ServicesliderComponent implements OnInit {
 
-  public services:Array<Service> = [];
-  public favoriteServices:Array<Service> = [];
+  @Input()  services:Array<Service> = [];
 
-  constructor(private service : ServicesService) {
+  constructor() {
 
   }
   
   ngOnInit(): void {
-    this.loadServices();
-  }
 
-  async loadServices() {
-    this.services = await this.service.getServices().toPromise();
-    this.favoriteServices = this.services.sort((a,b)=> (b.rating - a.rating)).slice(0, 10)
   }
 
 

@@ -4,18 +4,16 @@
   [centeredSlides]="false"
   [navigation]="true"
 >
-  <ng-template
-    *ngFor="let slide of [].constructor(5); index as i"
-    swiperSlide
-    let-data
-  >
-    <div
-      class="transition"
-      [class.active-slide]="data.isActive"
-      [class.bg-yellow]="data.isNext"
-      [class.bg-blue]="data.isPrev"
-    >
-      <app-entrepreneucard></app-entrepreneucard>
+  <ng-template *ngFor="let service of services" swiperSlide let-data>
+    <div *ngIf="(service.name == 'Rank')">
+      <div
+        class="transition"
+        [class.active-slide]="data.isActive"
+        [class.bg-yellow]="data.isNext"
+        [class.bg-blue]="data.isPrev"
+      >
+        <app-entrepreneucard [service]="service"></app-entrepreneucard>
+      </div>
     </div>
   </ng-template>
 </swiper>
