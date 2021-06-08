@@ -9,9 +9,9 @@ export class User {
     public eMail: string;
     public gender: string;
     public region: Region;
-    public contratedServices: Array<Service>;
+    public contractedServices: Array<number>;
 
-    public constructor(name: string, lastname: string, birthDay: Date, eMail: string, gender: string, region: Region, contratedServices: Array<Service>) {
+    public constructor(name: string, lastname: string, birthDay: Date, eMail: string, gender: string, region: Region, contractedServices: Array<number>) {
     
         this.name = name;
         this.lastname = lastname;
@@ -19,7 +19,7 @@ export class User {
         this.eMail = eMail;
         this.gender = gender;
         this.region = region;
-        this.contratedServices = contratedServices;
+        this.contractedServices = contractedServices;
     }
 
     

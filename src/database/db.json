@@ -345,12 +345,12 @@
     {
       "id": 1,
       "name": "Lana",
-      "last_name": "Rhoades",
+      "lastname": "Rhoades",
       "birth_date": "2003-02-07T04:00:00.000Z",
       "email": "trhoades0@noaa.gov",
       "gender": "Female",
       "region": "ARICAPARINACOTA",
-      "contracted_services": [
+      "contractedServices": [
         2,
         13
       ]
@@ -358,12 +358,12 @@
     {
       "id": 2,
       "name": "Wylie",
-      "last_name": "Beavis",
+      "lastname": "Beavis",
       "birth_date": "1988-06-16T04:00:00.000Z",
       "email": "wbeavis1@umn.edu",
       "gender": "Male",
       "region": "MAULE",
-      "contracted_services": [
+      "contractedServices": [
         15,
         3,
         1,
@@ -373,47 +373,48 @@
     {
       "id": 3,
       "name": "Bernardine",
-      "last_name": "Tobin",
+      "lastname": "Tobin",
       "birth_date": "2019-05-24T04:00:00.000Z",
       "email": "btobin2@toplist.cz",
       "gender": "Male",
       "region": "LOSRIOS",
-      "contracted_services": [
+      "contractedServices": [
         12,
-        8
+        8,
+        15
       ]
     },
     {
       "id": 4,
       "name": "Chaunce",
-      "last_name": "M'Quharg",
+      "lastname": "M'Quharg",
       "birth_date": "2015-09-15T04:00:00.000Z",
       "email": "cmquharg3@mysql.com",
       "gender": "Male",
       "region": "TARAPACA",
-      "contracted_services": []
+      "contractedServices": []
     },
     {
       "id": 5,
       "name": "Neysa",
-      "last_name": "Kenford",
+      "lastname": "Kenford",
       "birth_date": "2012-01-14T04:00:00.000Z",
       "email": "nkenford4@indiatimes.com",
       "gender": "Male",
       "region": "ANTOFAGASTA",
-      "contracted_services": [
+      "contractedServices": [
         11
       ]
     },
     {
       "id": 6,
       "name": "Constanta",
-      "last_name": "Attwoul",
+      "lastname": "Attwoul",
       "birth_date": "1992-05-06T04:00:00.000Z",
       "email": "cattwoul5@creativecommons.org",
       "gender": "Female",
       "region": "ARAUCANIA",
-      "contracted_services": [
+      "contractedServices": [
         2,
         19,
         20,
@@ -424,12 +425,12 @@
     {
       "id": 7,
       "name": "Parry",
-      "last_name": "Bemand",
+      "lastname": "Bemand",
       "birth_date": "2009-08-07T04:00:00.000Z",
       "email": "pbemand6@scribd.com",
       "gender": "Male",
       "region": "MAULE",
-      "contracted_services": [
+      "contractedServices": [
         14,
         5
       ]
@@ -437,12 +438,12 @@
     {
       "id": 8,
       "name": "Ema",
-      "last_name": "Reoch",
+      "lastname": "Reoch",
       "birth_date": "1991-06-17T04:00:00.000Z",
       "email": "ereoch7@ezinearticles.com",
       "gender": "Female",
       "region": "BIOBIO",
-      "contracted_services": [
+      "contractedServices": [
         16,
         20,
         13,
@@ -453,24 +454,24 @@
     {
       "id": 9,
       "name": "Emelia",
-      "last_name": "Christou",
+      "lastname": "Christou",
       "birth_date": "1996-04-07T04:00:00.000Z",
       "email": "echristou8@epa.gov",
       "gender": "Male",
       "region": "VALPARAISO",
-      "contracted_services": [
+      "contractedServices": [
         9
       ]
     },
     {
       "id": 10,
       "name": "Cassandre",
-      "last_name": "Twitty",
+      "lastname": "Twitty",
       "birth_date": "1999-08-16T04:00:00.000Z",
       "email": "ctwitty9@unc.edu",
       "gender": "Male",
       "region": "TARAPACA",
-      "contracted_services": [
+      "contractedServices": [
         4,
         6,
         17
@@ -501,12 +502,12 @@
     {
       "id": 1,
       "name": "Lana",
-      "last_name": "Rhoades",
+      "lastname": "Rhoades",
       "birth_date": "2003-02-07T04:00:00.000Z",
       "email": "trhoades0@noaa.gov",
       "gender": "Female",
       "region": "ARICAPARINACOTA",
-      "contracted_services": [
+      "contractedServices": [
         2,
         13
       ],
@@ -525,12 +526,12 @@
     {
       "id": 3,
       "name": "Bernardine",
-      "last_name": "Tobin",
+      "lastname": "Tobin",
       "birth_date": "2019-05-24T04:00:00.000Z",
       "email": "btobin2@toplist.cz",
       "gender": "Male",
       "region": "LOSRIOS",
-      "contracted_services": [
+      "contractedServices": [
         12,
         8
       ],
@@ -581,6 +582,20 @@
       "users": 9,
       "entres": 5,
       "porc": 0.58
+    }
+  ],
+  "requests":[
+    {
+      "id": 1,
+      "idService": 12,
+      "idUser": 3,
+      "idEntrepreneur":1 
+    },
+    {
+      "id": 2,
+      "idService": 15,
+      "idUser": 3,
+      "idEntrepreneur":1 
     }
   ]
 }

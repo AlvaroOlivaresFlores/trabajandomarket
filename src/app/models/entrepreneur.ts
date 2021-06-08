@@ -3,7 +3,7 @@ import { Service } from './service';
 import { User } from './user';
 
 export class Entrepreneur extends User {
-  private _services: Array<Number>;
+  public services: Array<Number>;
   private profilePicture: string;
   private description: string;
 
@@ -15,13 +15,12 @@ export class Entrepreneur extends User {
     eMail: string,
     gender: string,
     region: Region,
-    contratedServices: Array<Service>,
+    contratedServices: Array<number>,
     services: Array<Number>,
     profilePicture: string,
     description: string
   ) {
     super(
-      
       name,
       lastname,
       birthDay,
@@ -30,13 +29,11 @@ export class Entrepreneur extends User {
       region,
       contratedServices
     );
-    this._services = services;
+    this.services = services;
     this.profilePicture = profilePicture;
     this.description = description;
   }
-  get services() {
-    return this._services;
-  }
+
   get _profilePicture() {
     return this.profilePicture;
   }
