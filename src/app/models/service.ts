@@ -10,8 +10,9 @@ export class Service {
     public images: Array<string> = [];
     public status: boolean = false;
     public deliveryTerm: number = 0;
+    public entrepreneurId
 
-    public constructor(name: string, description: string, price: number, rating: number, category: Category, images: Array<string>, status: boolean, deliveryTerm: number){
+    public constructor(name: string, description: string, price: number, rating: number, category: Category, images: Array<string>, status: boolean, deliveryTerm: number, entrepreneurId: number){
         this.name = name;
         this.description = description;
         this.price = price;
@@ -20,6 +21,7 @@ export class Service {
         this.images = images;
         this.status = status;
         this.deliveryTerm = deliveryTerm;
+        this.entrepreneurId = entrepreneurId;
     }
 
 }
