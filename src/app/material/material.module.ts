@@ -47,14 +47,15 @@ import {MatMomentDateModule} from '@angular/material-moment-adapter';
     MatSortModule,
     MatTabsModule,
     MatSnackBarModule,
-
+    
     MatStepperModule,
     MatProgressSpinnerModule,
     MatChipsModule,
 
     MatCheckboxModule,
     MatDatepickerModule,
-    MatMomentDateModule
+    MatMomentDateModule,
+
   ],
   exports: [
     MatToolbarModule,
@@ -74,6 +75,7 @@ import {MatMomentDateModule} from '@angular/material-moment-adapter';
     MatSortModule,
     MatTabsModule,
     MatSnackBarModule,
+    
 
     MatStepperModule,
     MatProgressSpinnerModule,

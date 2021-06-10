@@ -1,36 +1,27 @@
 import { Category } from "./category.enum";
 
 export class Service {
-    private _id: number;
-    private _name: string;
-    private _description: string; 
-    private _price: number;
-    private _rating: number; 
-    private _category: Category;
-    private _images: Array<string>;
-    private _status: boolean;
-    private _deliveryTerm: number;
+    public readonly id: number = 0;
+    public name: string = "";
+    public description: string = ""; 
+    public price: number = 0;
+    public rating: number = 0; 
+    public category: Category = Category.NONE;
+    public images: Array<string> = [];
+    public status: boolean = false;
+    public deliveryTerm: number = 0;
+    public entrepreneurId
 
-    public constructor(id: number, name: string, description: string, price: number, rating: number, category: Category, images: Array<string>, status: boolean, deliveryTerm: number){
-        this._id = id;
-        this._name = name;
-        this._description = description;
-        this._price = price;
-        this._rating = rating;
-        this._category = category;
-        this._images = images;
-        this._status = status;
-        this._deliveryTerm = deliveryTerm;
+    public constructor(name: string, description: string, price: number, rating: number, category: Category, images: Array<string>, status: boolean, deliveryTerm: number, entrepreneurId: number){
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.rating = rating;
+        this.category = category;
+        this.images = images;
+        this.status = status;
+        this.deliveryTerm = deliveryTerm;
+        this.entrepreneurId = entrepreneurId;
     }
 
-    get id() { return this._id }
-    get name() { return this._name }
-    get description() { return this._description }
-    get price() { return this._price }
-    get rating() { return this._rating }
-    get category() { return this._category }
-    get images() { return this._images }
-    get status() { return this._status }
-    get deliveryTerm() { return this._deliveryTerm }
-    
 }

@@ -3,7 +3,9 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Service } from 'src/app/models/service';
+import { User } from 'src/app/models/user';
 import { ServicesService } from 'src/app/services/services.service';
+import { UsersService } from 'src/app/services/users.service';
 
 export interface HiredServicesData {
   name: string;
@@ -12,7 +14,6 @@ export interface HiredServicesData {
   state: string;
 }
 
-
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
@@ -20,6 +21,8 @@ export interface HiredServicesData {
 })
 export class TableComponent implements AfterViewInit {
   Element_hired: Service[];
+  contractedServices: Service[];
+  users: User[];
   dataSource: MatTableDataSource<Service>;
   displayedColumns: string[] = ['position', 'name', 'price'];
 
@@ -28,13 +31,28 @@ export class TableComponent implements AfterViewInit {
   }
 
   async loadServices() {
-    this.Element_hired=await this.hired.getServices().toPromise();
-    this.dataSource=new MatTableDataSource<Service>(this.Element_hired);
-    this.dataSource.paginator=this.paginator;
-    this.dataSource.sort=this.sort;
+    this.Element_hired = await this.hired.getServices().toPromise();
+    this.users = await this.usersService.getUsers().toPromise();
+
+    this.users.forEach((u) => {
+      console.log(u.name)
+      // Se simula que el usuario logueado tiene el id = 6
+      if (u.id === 6) {
+        u.requests.forEach((s) => {
+
+          this.Element_hired.forEach(se => {
+            if (s.userId === se.id){
+              this.contractedServices.push(se);
+            }
+          })
+        });
+      }
+    });
+
+    this.dataSource = new MatTableDataSource<Service>(this.contractedServices);
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
-
-
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
@@ -44,8 +62,13 @@ export class TableComponent implements AfterViewInit {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
-  constructor(private hired:ServicesService,) {
-    this.Element_hired=[];
-    this.dataSource=new MatTableDataSource<Service>();
+  constructor(
+    private hired: ServicesService,
+    private usersService: UsersService
+  ) {
+    this.Element_hired = [];
+    this.users = [];
+    this.dataSource = new MatTableDataSource<Service>();
+    this.contractedServices = [];
   }
 }
