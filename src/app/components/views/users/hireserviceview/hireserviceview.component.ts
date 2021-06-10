@@ -19,7 +19,7 @@ export class HireserviceviewComponent implements OnInit {
     private selectedService: ServicesService,
     private entrepreneursService: EntrepreneurService
   ) {
-    this.service = new Service('', '', 0, 0, Category.NONE, ['', ''], false, 0);
+    this.service = new Service('', '', 0, 0, Category.NONE, ['', ''], false, 0,0);
     this.entrepreneurs = [];
     this.ename = '';
   }
@@ -49,7 +49,7 @@ export class HireserviceviewComponent implements OnInit {
       console.log(e.name)
       e.services.forEach((s) => {
         console.log(s)
-        if ((s === this.service.id)) {
+        if ((s.id === this.service.id)) {
           this.ename = e.name;
         }
       });

@@ -44,7 +44,7 @@ export class PostserviceviewComponent implements OnInit {
           this.category,
           this.images,
           true,
-          parseInt(this.deliveryTerm)
+          parseInt(this.deliveryTerm),0
         )
       )
       .toPromise();

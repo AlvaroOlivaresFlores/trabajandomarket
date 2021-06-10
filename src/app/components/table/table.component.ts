@@ -38,10 +38,10 @@ export class TableComponent implements AfterViewInit {
       console.log(u.name)
       // Se simula que el usuario logueado tiene el id = 6
       if (u.id === 6) {
-        u.contractedServices.forEach((s) => {
+        u.requests.forEach((s) => {
 
           this.Element_hired.forEach(se => {
-            if (s === se.id){
+            if (s.userId === se.id){
               this.contractedServices.push(se);
             }
           })

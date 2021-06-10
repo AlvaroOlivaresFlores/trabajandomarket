@@ -62,7 +62,7 @@ export class EntrepreneurtableComponent implements OnInit {
       if (e.id === 1) {
         this.requests.forEach(r => {
           this.users.forEach(u => {
-            if (r.idUser == u.id) {
+            if (r.userId == u.id) {
               console.log(u.name)
                   this.myservices.push(u)
             }

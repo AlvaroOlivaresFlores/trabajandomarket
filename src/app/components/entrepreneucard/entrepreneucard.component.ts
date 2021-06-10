@@ -11,7 +11,7 @@ import { ServicesService } from 'src/app/services/services.service';
 export class EntrepreneucardComponent implements OnInit {
 
   constructor(private myServices: ServicesService) { 
-    this.service = new Service("","",0,0,Category.NONE,["",""],false,0);
+    this.service = new Service("","",0,0,Category.NONE,["",""],false,0,0);
   }
 
   ngOnInit(): void {
