@@ -1,46 +1,38 @@
 import { Region } from './region.enum';
+import { Request } from './request';
 import { Service } from './service';
 import { User } from './user';
 
 export class Entrepreneur extends User {
-  private _services: Array<Number>;
+  public services: Array<Service>;
   private profilePicture: string;
   private description: string;
 
   public constructor(
     
-    name: string,
+    firstname: string,
     lastname: string,
-    birthDay: Date,
-    eMail: string,
+    birthday: Date,
+    email: string,
     gender: string,
     region: Region,
-    contratedServices: Array<Service>,
-    services: Array<Number>,
+    requests: Array<Request>,
+    services: Array<Service>,
     profilePicture: string,
     description: string
   ) {
     super(
-      
-      name,
+      firstname,
       lastname,
-      birthDay,
-      eMail,
+      birthday,
+      email,
       gender,
       region,
-      contratedServices
+      requests
     );
-    this._services = services;
+    this.services = services;
     this.profilePicture = profilePicture;
     this.description = description;
   }
-  get services() {
-    return this._services;
-  }
-  get _profilePicture() {
-    return this.profilePicture;
-  }
-  get _description() {
-    return this.description;
-  }
+
 }

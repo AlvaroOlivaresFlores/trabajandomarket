@@ -17,7 +17,6 @@ export class HomeviewComponent implements OnInit {
 
   }
 
-    
   ngOnInit(): void {
     this.loadServices();
   }

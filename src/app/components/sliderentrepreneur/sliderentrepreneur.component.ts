@@ -33,10 +33,7 @@ SwiperCore.use([
   templateUrl: './sliderentrepreneur.component.html',
   styleUrls: ['./sliderentrepreneur.component.scss'],
 })
-
 export class SliderentrepreneurComponent implements OnInit {
-
-
   public services: Array<Service> = [];
   public myServices: Array<Service> = [];
   public entrepreneurs: Array<Entrepreneur> = [];
@@ -45,24 +42,20 @@ export class SliderentrepreneurComponent implements OnInit {
     this.loadEntrepreneurs();
   }
 
-  constructor(private service: ServicesService, 
-    private entrepreneurC: EntrepreneurService) {
-    }
+  constructor(
+    private service: ServicesService,
+    private entrepreneurC: EntrepreneurService
+  ) {}
 
-  async loadEntrepreneurs() { //ok
+  async loadEntrepreneurs() {
+    //ok
     this.services = await this.service.getServices().toPromise();
     this.entrepreneurs = await this.entrepreneurC.getUsers().toPromise();
     this.loadmyService();
   }
-  async loadmyService(){
-
-    for(let i = 0; i<this.services.length; i++){
-      for(let j =0; j<this.entrepreneurs[0].services.length;j++){
-        if(this.services[i].id == this.entrepreneurs[0].services[j]){
-          this.myServices.push(this.services[i])
-        }
-      }
+  async loadmyService() {
+    for (let i = 0; i < this.services.length; i++) {
+      for (let j = 0; j < this.entrepreneurs[0].services.length; j++) {}
     }
   }
-
 }
