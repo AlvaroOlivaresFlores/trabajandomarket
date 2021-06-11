@@ -18,16 +18,19 @@ import { ServicesrequestviewComponent } from './components/views/users/servicesr
 import { ServicesviewComponent } from './components/views/users/servicesview/servicesview.component';
 import { SignupviewComponent } from './components/views/users/signupview/signupview.component';
 import { UserviewComponent } from './components/views/users/userview/userview.component';
+import { AdminguardGuard } from './guards/adminguard.guard';
+import { AuthenticationGuard } from './guards/authentication.guard';
 
 const routes: Routes = [
   { path: '', component: LandingpageComponent },
   { path: 'login', component: LoginviewComponent },
-  { path: 'adminlogin', component: LoginadminviewComponent },
+  { path: 'adminlogin', component: LoginadminviewComponent},
   { path: 'signup', component: SignupviewComponent },
   { path: 'forgotpassword', component: ForgotpasswordviewComponent },
   {
     path: 'home',
     component: UserviewComponent,
+    canActivate: [AuthenticationGuard],
     children: [
       { path: '', component: HomeviewComponent },
       { path: 'hireservice', component: HireserviceviewComponent },
@@ -48,8 +51,10 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminviewComponent,
+    canActivate: [AdminguardGuard],
     children: [{ path: 'dashboard', component: AdmindashboardviewComponent }],
   },
+  {path:'**',redirectTo:''},
 ];
 
 @NgModule({

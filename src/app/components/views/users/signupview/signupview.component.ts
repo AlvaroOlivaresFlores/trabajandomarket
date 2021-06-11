@@ -14,10 +14,10 @@ export class SignupviewComponent implements OnInit {
   name:string;
   lastName:string;
   eMail:string;
-  
   birthDate: Date;
   gender: string;
   region: Region;
+  password:string;
   constructor(private usersService : UsersService) {
     this.name= "";
     this.lastName= "";
@@ -25,6 +25,7 @@ export class SignupviewComponent implements OnInit {
     this.birthDate=new Date(1990,0,1);
     this.gender="";
     this.region=Region.REGIONMETROPOLITANA;
+    this.password="";
    }
 
   ngOnInit(): void {
@@ -39,7 +40,8 @@ export class SignupviewComponent implements OnInit {
         this.eMail,
         this.gender,
         this.region,
-        []
+        [],
+        this.password,
       )
     )
     .toPromise();

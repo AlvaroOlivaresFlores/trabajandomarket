@@ -19,7 +19,8 @@ export class Entrepreneur extends User {
     requests: Array<Request>,
     services: Array<Service>,
     profilePicture: string,
-    description: string
+    description: string,
+    password:string
   ) {
     super(
       firstname,
@@ -28,7 +29,8 @@ export class Entrepreneur extends User {
       email,
       gender,
       region,
-      requests
+      requests,
+      password
     );
     this.services = services;
     this.profilePicture = profilePicture;

@@ -90,9 +90,9 @@ import { AdmindialogentrepreneurComponent } from './components/admindialogentrep
     MaterialModule,
     SwiperModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
