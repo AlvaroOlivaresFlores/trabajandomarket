@@ -16,8 +16,8 @@ export class EntrepreneurService {
   getUsers(){
     return this.http.get<Entrepreneur[]>("http://localhost:3000/entrepreneurs");
   }
-  getUser(id:number){
-    return this.http.get<Entrepreneur>("http://localhost:3000/entrepreneurs/"+id);
+  getEntrepreneur(id:number){
+    return this.http.get<Entrepreneur>("http://localhost:3000/entrepreneurs/"+id+"?_embed=services");
   }
   addUser(user: Entrepreneur){
     return this.http.post("http://localhost:3000/entrepreneurs", user);
@@ -28,10 +28,5 @@ export class EntrepreneurService {
   deleteUser(id: number){
     return this.http.delete("http://localhost:3000/entrepreneurs/"+id)
   }
-  getEntrepreneurSelected(){
-    return this.entrepreneurSelected;
-  }
-  setEntrepreneurSelected(entrepreneur: Entrepreneur){
-    this.entrepreneurSelected = entrepreneur;
-  }
+
 }

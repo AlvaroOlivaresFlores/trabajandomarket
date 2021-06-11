@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './material/material.module';
 import { SwiperModule } from 'swiper/angular';
-
+// Components
 import { AdminviewComponent } from './components/views/admin/adminview/adminview.component';
 import { LoginadminviewComponent } from './components/views/admin/loginadminview/loginadminview.component';
 import { BlockuserviewComponent } from './components/views/admin/blockuserview/blockuserview.component';
@@ -30,7 +29,6 @@ import { LandingpageComponent } from './components/views/landingpage/landingpage
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
-import { TableComponent } from './components/table/table.component';
 import { ServicecardComponent } from './components/servicecard/servicecard.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { UserviewComponent } from './components/views/users/userview/userview.component';
@@ -40,10 +38,10 @@ import { EntrepreneursComponent } from './components/views/entrepreneurs/entrepr
 import { EntrepreneucardComponent } from './components/entrepreneucard/entrepreneucard.component';
 import { EntrepreneurdialogComponent } from './components/entrepreneurdialog/entrepreneurdialog.component';
 import { SliderentrepreneurComponent } from './components/sliderentrepreneur/sliderentrepreneur.component';
-import { HttpClientModule } from '@angular/common/http';
 import { EntrepreneurtableComponent } from './components/entrepreneurtable/entrepreneurtable.component';
 import { AdmindashboardentrepreneurviewComponent } from './components/views/admin/admindashboardentrepreneurview/admindashboardentrepreneurview.component';
 import { AdmindialogentrepreneurComponent } from './components/admindialogentrepreneur/admindialogentrepreneur.component';
+import { UsertableComponent } from './components/usertable/usertable.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +67,6 @@ import { AdmindialogentrepreneurComponent } from './components/admindialogentrep
     FooterComponent,
     NavbarComponent,
     SearchbarComponent,
-    TableComponent,
     ServicecardComponent,
     SliderComponent,
     UserviewComponent,
@@ -82,6 +79,7 @@ import { AdmindialogentrepreneurComponent } from './components/admindialogentrep
     EntrepreneurtableComponent,
     AdmindashboardentrepreneurviewComponent,
     AdmindialogentrepreneurComponent,
+    UsertableComponent,
   ],
   imports: [
     BrowserModule,
