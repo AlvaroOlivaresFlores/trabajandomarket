@@ -10,7 +10,7 @@ export class EntrepreneurService {
  
   entrepreneurSelected: Entrepreneur;
   constructor(private http: HttpClient) { 
-    this.entrepreneurSelected = new Entrepreneur("","",new Date(1990,0,1),"","",Region.REGIONMETROPOLITANA,[],[],"","");
+    this.entrepreneurSelected = new Entrepreneur("","",new Date(1990,0,1),"","",Region.REGIONMETROPOLITANA,[],[],"","","");
   }
 
   getUsers(){

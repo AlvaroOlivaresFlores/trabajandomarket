@@ -1,3 +1,4 @@
+import { C } from '@angular/cdk/keycodes';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Region } from '../models/region.enum';
@@ -10,7 +11,7 @@ export class UsersService {
 
   currentUserLog: User
   constructor(private http: HttpClient) { 
-    this.currentUserLog = new User("","",new Date,"","",Region.REGIONMETROPOLITANA,[])
+    this.currentUserLog = new User("","",new Date,"","",Region.REGIONMETROPOLITANA,[],"")
   }
 
   getUsers(){
@@ -28,13 +29,7 @@ export class UsersService {
   deleteUser(id: number){
     return this.http.delete("http://localhost:3000/users/"+id)
   }
-
-  // para simular el inicio de secion de un usuario.
-  setCurrentUserLog(currentUserLog: User){
-    this.currentUserLog = currentUserLog;
+  login(email:string, password:string){
+    return this.http.post<any>("http://localhost:3000/login", {email:email,password:password})
   }
-  getCurrentUserLog(){
-    return this.currentUserLog;
-  }
-
 }
