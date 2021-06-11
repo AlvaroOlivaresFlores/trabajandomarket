@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Service } from 'src/app/models/service';
+import { AuthService } from 'src/app/services/auth.service';
 import { ServicesService } from 'src/app/services/services.service';
 
 @Component({
@@ -13,16 +14,17 @@ export class HomeviewComponent implements OnInit {
   public favoriteServices:Array<Service> = [];
   public lowerPriceServices:Array<Service> = [];
 
-  constructor(private service : ServicesService) {
+  constructor(private service : ServicesService, private authservice:AuthService) {
 
   }
 
   ngOnInit(): void {
     this.loadServices();
-
+    console.log(this.authservice.getCurrentUserLog());
   }
 
   async loadServices() {
+
     this.services = await this.service.getServices().toPromise();
     this.favoriteServices = this.services.sort((a,b)=> (b.rating - a.rating)).slice(0, 10)
     this.lowerPriceServices = this.services.sort((a,b)=> (a.price - b.price)).slice(0, 10)

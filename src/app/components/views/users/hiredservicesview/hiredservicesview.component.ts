@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 import { UsersService } from 'src/app/services/users.service';
 
 @Component({
@@ -7,11 +8,11 @@ import { UsersService } from 'src/app/services/users.service';
   styleUrls: ['./hiredservicesview.component.scss'],
 })
 export class HiredservicesviewComponent implements OnInit {
-  currentUser: number = 1;
+  currentUser: number=0;
   username: string = '';
   data: Array<[number, string, number, string, string]>;
 
-  constructor(private usersService: UsersService) {
+  constructor(private usersService: UsersService,private authservice:AuthService) {
     this.data = [];
   }
 
@@ -20,6 +21,7 @@ export class HiredservicesviewComponent implements OnInit {
   }
 
   async loadServices() {
+    this.currentUser=this.authservice.getCurrentUserLog().id;
     this.username = (
       await this.usersService.getUser(this.currentUser).toPromise()
     ).firstname;

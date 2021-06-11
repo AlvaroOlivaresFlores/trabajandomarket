@@ -18,6 +18,7 @@ export class SignupviewComponent implements OnInit {
   gender: string;
   region: Region;
   password:string;
+  isentrepreneur:boolean;
   constructor(private usersService : UsersService) {
     this.name= "";
     this.lastName= "";
@@ -26,6 +27,7 @@ export class SignupviewComponent implements OnInit {
     this.gender="";
     this.region=Region.REGIONMETROPOLITANA;
     this.password="";
+    this.isentrepreneur=false;
    }
 
   ngOnInit(): void {
@@ -42,6 +44,7 @@ export class SignupviewComponent implements OnInit {
         this.region,
         [],
         this.password,
+        this.isentrepreneur
       )
     )
     .toPromise();

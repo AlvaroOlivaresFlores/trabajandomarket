@@ -11,7 +11,7 @@ export class UsersService {
   currentUserLog: User
 
   constructor(private http: HttpClient) { 
-    this.currentUserLog = new User("","",new Date,"","",Region.REGIONMETROPOLITANA,[],"")
+    this.currentUserLog = new User("","",new Date,"","",Region.REGIONMETROPOLITANA,[],"",false)
   }
 
   getUsers(){
@@ -35,5 +35,12 @@ export class UsersService {
   }
   login(email:string, password:string){
     return this.http.post<any>("http://localhost:3000/login", {email:email,password:password})
+  }
+
+  setCurrentUserLog(currentUserLog: User){
+    this.currentUserLog = currentUserLog;
+  }
+  getCurrentUserLog(){
+    return this.currentUserLog;
   }
 }

@@ -5,10 +5,11 @@
       "firstname": "Alvaro",
       "lastname": "Olivares",
       "birthdate": "1998-06-07T04:00:00.000Z",
-      "email": "trhoades0@noaa.gov",
+      "email": "alvaro.olivares@trabajandomarket.cl",
       "gender": "Male",
       "region": "ATACAMA",
-      "password": "Alvaro1234"
+      "password": "Alvaro1234",
+      "isentrepreneur":true
     },
     {
       "id": 2,
@@ -18,7 +19,8 @@
       "email": "joaquinvidal@mayor.cl",
       "gender": "Male",
       "region": "METROPOLITANA",
-      "password": "Joaquin1234"
+      "password": "Joaquin1234",
+      "isentrepreneur":false
     },
     {
       "id": 3,
@@ -28,7 +30,8 @@
       "email": "seba_aguirre@gmail.com",
       "gender": "Male",
       "region": "METROPOLITANA",
-      "password": "Sebastian1234"
+      "password": "Sebastian1234",
+      "isentrepreneur":true
     },
     {
       "id": 4,
@@ -38,12 +41,14 @@
       "email": "fabian_o98@hotmail.com",
       "gender": "Male",
       "region": "METROPOLITANA",
-      "password": "Fabian1234"
+      "password": "Fabian1234",
+      "isentrepreneur":false
     }
   ],
   "entrepreneurs": [
     {
       "id": 1,
+      "userId":1,
       "firstname": "Alvaro",
       "lastname": "Olivares",
       "birthdate": "1998-06-07T04:00:00.000Z",
@@ -55,6 +60,7 @@
     },
     {
       "id": 2,
+      "userId":3,
       "firstname": "Sebastian",
       "lastname": "Aguirre",
       "birthdate": "2000-02-07T04:00:00.000Z",

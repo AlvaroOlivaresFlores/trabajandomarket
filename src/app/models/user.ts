@@ -12,8 +12,9 @@ export class User {
     public region: Region;
     public requests: Array<Request>;
     public password: string;
+    public isentrepreneur: boolean;
 
-    public constructor(name: string, lastname: string, birthDay: Date, eMail: string, gender: string, region: Region, requests: Array<Request>, password: string) {
+    public constructor(name: string, lastname: string, birthDay: Date, eMail: string, gender: string, region: Region, requests: Array<Request>, password: string, isEntre: boolean) {
     
         this.firstname = name;
         this.lastname = lastname;
@@ -23,6 +24,7 @@ export class User {
         this.region = region;
         this.requests = requests;
         this.password=password;
+        this.isentrepreneur=isEntre;
     }
 
     

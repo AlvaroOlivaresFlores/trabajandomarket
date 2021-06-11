@@ -3,6 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Request } from 'src/app/models/request';
+import { AuthService } from 'src/app/services/auth.service';
 import { RequestService } from 'src/app/services/request.service';
 
 @Component({
@@ -22,6 +23,7 @@ export class UsertableComponent implements AfterViewInit {
   }
 
   async loadRequests() {
+    this.currentUser=this.authservice.getCurrentUserLog().id;
     this.requests = await this.requestsService
       .getRequestedServices(this.currentUser)
       .toPromise();
@@ -48,7 +50,7 @@ export class UsertableComponent implements AfterViewInit {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
-  constructor(private requestsService: RequestService) {
+  constructor(private requestsService: RequestService,private authservice:AuthService) {
     this.dataSource = new MatTableDataSource<
       [number, string, number, string, string]
     >();

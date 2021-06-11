@@ -47,7 +47,7 @@ export class SliderentrepreneurComponent implements OnInit {
   constructor(
     private entrepreneursService: EntrepreneurService
   ) {
-    this.entrepreneur = new Entrepreneur("","",new Date,"","",Region.REGIONMETROPOLITANA,[],[],"","","")
+    this.entrepreneur = new Entrepreneur("","",new Date,"","",Region.REGIONMETROPOLITANA,[],[],"","","",false,0)
   }
 
   async loadSerices() {
