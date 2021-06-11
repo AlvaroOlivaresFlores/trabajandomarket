@@ -15,6 +15,8 @@ export class PostserviceviewComponent implements OnInit {
   category: Category;
   deliveryTerm: string;
   images: Array<string>;
+  entrepreneurId: number;
+  currentUser: number = 2;
 
   constructor(private servicesService: ServicesService) {
     this.name = '';
@@ -29,6 +31,7 @@ export class PostserviceviewComponent implements OnInit {
       'https://via.placeholder.com/600x300/7BF0F5/000000%20?Text=Image1',
       'https://via.placeholder.com/600x300',
     ];
+    this.entrepreneurId = 0;
   }
 
   ngOnInit(): void {}
@@ -44,7 +47,8 @@ export class PostserviceviewComponent implements OnInit {
           this.category,
           this.images,
           true,
-          parseInt(this.deliveryTerm),0
+          parseInt(this.deliveryTerm),
+          this.currentUser
         )
       )
       .toPromise();

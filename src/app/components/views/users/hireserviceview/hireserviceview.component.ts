@@ -46,13 +46,16 @@ export class HireserviceviewComponent implements OnInit {
   async loadEntrepreneurs() {
     this.entrepreneurs = await this.entrepreneursService.getUsers().toPromise();
     this.entrepreneurs.forEach((e) => {
-      console.log(e.name)
+      console.log(e.firstname)
       e.services.forEach((s) => {
         console.log(s)
         if ((s.id === this.service.id)) {
-          this.ename = e.name;
+          this.ename = e.firstname;
         }
       });
     });
+  }
+  requestService() {
+    
   }
 }
