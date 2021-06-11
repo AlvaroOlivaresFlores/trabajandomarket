@@ -88,9 +88,9 @@ import { UsertableComponent } from './components/usertable/usertable.component';
     MaterialModule,
     SwiperModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

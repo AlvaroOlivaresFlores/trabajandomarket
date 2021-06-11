@@ -14,5 +14,6 @@ export enum Region {
     LOSLAGOS,
     LOSRIOS,
     AYSEN,
-    MAGALLANES
+    MAGALLANES,
+    NONE = "NONE",
 }

@@ -7,7 +7,8 @@
       "birthdate": "1998-06-07T04:00:00.000Z",
       "email": "trhoades0@noaa.gov",
       "gender": "Male",
-      "region": "ATACAMA"
+      "region": "ATACAMA",
+      "password": "Alvaro1234"
     },
     {
       "id": 2,
@@ -16,7 +17,8 @@
       "birthdate": "2000-02-07T04:00:00.000Z",
       "email": "joaquinvidal@mayor.cl",
       "gender": "Male",
-      "region": "METROPOLITANA"
+      "region": "METROPOLITANA",
+      "password": "Joaquin1234"
     },
     {
       "id": 3,
@@ -25,7 +27,8 @@
       "birthdate": "2000-02-07T04:00:00.000Z",
       "email": "seba_aguirre@gmail.com",
       "gender": "Male",
-      "region": "METROPOLITANA"
+      "region": "METROPOLITANA",
+      "password": "Sebastian1234"
     },
     {
       "id": 4,
@@ -34,7 +37,8 @@
       "birthdate": "1998-02-07T04:00:00.000Z",
       "email": "fabian_o98@hotmail.com",
       "gender": "Male",
-      "region": "METROPOLITANA"
+      "region": "METROPOLITANA",
+      "password": "Fabian1234"
     }
   ],
   "entrepreneurs": [
@@ -392,69 +396,12 @@
       "porc": 0.58
     }
   ],
-  "reports": [
+  "admins":[
     {
-      "id": 1,
-      "date": "3/24/2020",
-      "users": 9,
-      "entres": 2,
-      "porc": 0.62
-    },
-    {
-      "id": 2,
-      "date": "12/31/2020",
-      "users": 8,
-      "entres": 4,
-      "porc": 0.48
-    },
-    {
-      "id": 3,
-      "date": "12/15/2020",
-      "users": 10,
-      "entres": 5,
-      "porc": 0.88
-    },
-    {
-      "id": 4,
-      "date": "3/1/2021",
-      "users": 7,
-      "entres": 1,
-      "porc": 0.5
-    },
-    {
-      "id": 5,
-      "date": "4/14/2021",
-      "users": 9,
-      "entres": 5,
-      "porc": 0.58
-    },
-    {
-      "id": 6,
-      "date": "6/6/2021",
-      "users": 8,
-      "entres": 2,
-      "porc": 0.25
-    },
-    {
-      "id": 7,
-      "date": "6/6/2021",
-      "users": 12,
-      "entres": 2,
-      "porc": 0.16666666666666666
-    },
-    {
-      "id": 8,
-      "date": "6/6/2021",
-      "users": 12,
-      "entres": 2,
-      "porc": 0.16666666666666666
-    },
-    {
-      "id": 9,
-      "date": "6/6/2021",
-      "users": 12,
-      "entres": 2,
-      "porc": 0.16666666666666666
+      "Id":"1",
+      "name":"Joaquin",
+      "email":"joaquinvidal@mayor.cl",
+      "password":"AdminJoaquin1234"
     }
   ]
 }

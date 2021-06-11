@@ -19,14 +19,14 @@
           <hr />
           <div class="container1">
             <mat-form-field appearance="fill" class="name">
-              <mat-label>Nombre</mat-label>
-              <input matInput type="string" class="input" />
+              <mat-label>Email</mat-label>
+              <input [(ngModel)]="email" name="email"  matInput type="string" class="input" />
               <mat-icon matSuffix>account_circle</mat-icon>
             </mat-form-field>
 
             <mat-form-field appearance="fill" class="pass">
-              <mat-label>Clave</mat-label>
-              <input matInput [type]="hide ? 'password' : 'text'" />
+              <mat-label>Contraseña</mat-label>
+              <input [(ngModel)]="password" name="password"  matInput [type]="hide ? 'password' : 'text'" />
               <button
                 mat-icon-button
                 matSuffix
@@ -44,7 +44,7 @@
             >Recordar contraseña</mat-checkbox
           >
           <mat-card-actions>
-            <button routerLink="/admin/dashboard" mat-button class="btn">
+            <button (click)="loginAdmin()"mat-button class="btn">
               Iniciar Sesion
             </button>
           </mat-card-actions>
