@@ -4,20 +4,20 @@ import { Service } from "./service";
 
 export class User {
     public readonly id: number = 0;
-    public name: string;
+    public firstname: string;
     public lastname: string;
-    public birthDay: Date;
-    public eMail: string;
+    public birthdate: Date;
+    public email: string;
     public gender: string;
     public region: Region;
     public requests: Array<Request>;
 
     public constructor(name: string, lastname: string, birthDay: Date, eMail: string, gender: string, region: Region, requests: Array<Request>) {
     
-        this.name = name;
+        this.firstname = name;
         this.lastname = lastname;
-        this.birthDay = birthDay;
-        this.eMail = eMail;
+        this.birthdate = birthDay;
+        this.email = eMail;
         this.gender = gender;
         this.region = region;
         this.requests = requests;

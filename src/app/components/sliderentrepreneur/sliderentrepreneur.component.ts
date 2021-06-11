@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Entrepreneur } from 'src/app/models/entrepreneur';
+import { Region } from 'src/app/models/region.enum';
 import { Service } from 'src/app/models/service';
 import { EntrepreneurService } from 'src/app/services/entrepreneur.service';
 import { ServicesService } from 'src/app/services/services.service';
@@ -34,28 +35,24 @@ SwiperCore.use([
   styleUrls: ['./sliderentrepreneur.component.scss'],
 })
 export class SliderentrepreneurComponent implements OnInit {
-  public services: Array<Service> = [];
-  public myServices: Array<Service> = [];
-  public entrepreneurs: Array<Entrepreneur> = [];
 
+  currentUser: number = 2;
+  myServices: Array<Service> = [];
+
+  public entrepreneur: Entrepreneur;
   ngOnInit(): void {
-    this.loadEntrepreneurs();
+    this.loadSerices();
   }
 
   constructor(
-    private service: ServicesService,
-    private entrepreneurC: EntrepreneurService
-  ) {}
+    private entrepreneursService: EntrepreneurService
+  ) {
+    this.entrepreneur = new Entrepreneur("","",new Date,"","",Region.REGIONMETROPOLITANA,[],[],"","")
+  }
 
-  async loadEntrepreneurs() {
-    //ok
-    this.services = await this.service.getServices().toPromise();
-    this.entrepreneurs = await this.entrepreneurC.getUsers().toPromise();
-    this.loadmyService();
+  async loadSerices() {
+    this.entrepreneur = await this.entrepreneursService.getEntrepreneur(this.currentUser).toPromise();
+    this.myServices = this.entrepreneur.services;
   }
-  async loadmyService() {
-    for (let i = 0; i < this.services.length; i++) {
-      for (let j = 0; j < this.entrepreneurs[0].services.length; j++) {}
-    }
-  }
+
 }

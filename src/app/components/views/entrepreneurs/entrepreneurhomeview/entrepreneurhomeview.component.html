@@ -1,16 +1,24 @@
 <div class="container">
-    <nav mat-tab-nav-bar class="tab">
-      <a
-        mat-tab-link
-        *ngFor="let link of navLinks"
-        [routerLink]="link.path"
-        routerLinkActive
-        #rla="routerLinkActive"
-        [active]="rla.isActive"
-      >
-        {{ link.label }}
-      </a>
-    </nav>
-    <router-outlet></router-outlet>
+  <div class="title">
+    <span>Panel de Emprendedor</span>
+  </div>
+  <nav mat-tab-nav-bar class="tab">
+    <a
+      mat-tab-link
+      *ngFor="let link of navLinks"
+      [routerLink]="link.path"
+      routerLinkActive
+      #rla="routerLinkActive"
+      [active]="rla.isActive"
+    >
+      {{ link.label }}
+    </a>
+  </nav>
+  <router-outlet></router-outlet>
+  <div class="row center-xs">
+    <span class="title">Solicitudes Pendientes</span>
+  </div>
+  <div class="container table">
+    <app-entrepreneurtable ></app-entrepreneurtable>
+  </div>
 </div>
-

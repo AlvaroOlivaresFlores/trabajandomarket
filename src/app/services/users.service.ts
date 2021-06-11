@@ -9,6 +9,7 @@ import { User } from '../models/user';
 export class UsersService {
 
   currentUserLog: User
+
   constructor(private http: HttpClient) { 
     this.currentUserLog = new User("","",new Date,"","",Region.REGIONMETROPOLITANA,[])
   }
@@ -16,8 +17,12 @@ export class UsersService {
   getUsers(){
     return this.http.get<User[]>("http://localhost:3000/users");
   }
+
   getUser(id:number){
-    return this.http.get<User>("http://localhost:3000/user/"+id);
+    return this.http.get<User>("http://localhost:3000/users/"+id);
+  }
+  getUserRequests(id:number){
+    return this.http.get<User>("http://localhost:3000/users/"+id+"?_embed=requests");
   }
   addUser(user: User){
     return this.http.post("http://localhost:3000/users", user);
