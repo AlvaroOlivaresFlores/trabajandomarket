@@ -36,7 +36,7 @@ SwiperCore.use([
 })
 export class SliderentrepreneurComponent implements OnInit {
 
-  currentUser: number = 2;
+  currentUser: number = 1;
   myServices: Array<Service> = [];
 
   public entrepreneur: Entrepreneur;
@@ -47,7 +47,7 @@ export class SliderentrepreneurComponent implements OnInit {
   constructor(
     private entrepreneursService: EntrepreneurService
   ) {
-    this.entrepreneur = new Entrepreneur("","",new Date,"","",Region.REGIONMETROPOLITANA,[],[],"","")
+    this.entrepreneur = new Entrepreneur("","",new Date,"","",Region.REGIONMETROPOLITANA,[],[],"","","")
   }
 
   async loadSerices() {

@@ -16,7 +16,6 @@ server.post("/login", (req, res) => {
   let password = req.body.password;
   let usuarios = router.db.get("users").value();
   let findUser = false;
-  
   usuarios.forEach(usuario => {
     if (email == usuario.email && password == usuario.password) {
       findUser = true;

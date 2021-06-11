@@ -1,4 +1,3 @@
-import { C } from '@angular/cdk/keycodes';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Region } from '../models/region.enum';
