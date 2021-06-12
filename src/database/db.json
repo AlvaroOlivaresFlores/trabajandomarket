@@ -360,12 +360,6 @@
       "name": "Joaquin",
       "email": "joaquinvidal@mayor.cl",
       "password": "AdminJoaquin1234"
-    },
-    {
-      "Id": "2",
-      "name": "Alvaro",
-      "email": "alvaro.olivares@trabajandomarket.cl",
-      "password": "AdminAlvaro1234"
     }
   ]
 }

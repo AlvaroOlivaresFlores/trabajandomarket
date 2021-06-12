@@ -6,9 +6,10 @@
   <img mat-card-image src="http://via.placeholder.com/250x200" alt="Photo of a Shiba Inu">
   <mat-card-content>
     <p>{{ service.description }}</p>
+    <span>Precio: {{ service.price }}</span>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button>Editar</button>
-    <span>Precio: {{ service.price }}</span>
+    <button mat-button (click)="openDialog(service)">Editar</button>
+    <button mat-button color="warn"(click)="openDialogRemove(service)">Eliminar</button>
   </mat-card-actions>
 </mat-card>
