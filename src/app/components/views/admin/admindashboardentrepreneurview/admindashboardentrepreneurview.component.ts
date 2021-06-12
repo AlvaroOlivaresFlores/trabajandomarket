@@ -57,7 +57,7 @@ export class AdmindashboardentrepreneurviewComponent implements OnInit {
   }
 
   async loadServices() {
-    this.ELEMENT_DATA = await this.userc.getUsers().toPromise();
+    this.ELEMENT_DATA = await this.userc.getEntrepreneurs().toPromise();
     this.dataSource = new MatTableDataSource<Entrepreneur>(this.ELEMENT_DATA);
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;

@@ -4,31 +4,30 @@ import { Service } from "./service";
 import { User } from "./user";
 
 export class Request {
-  public readonly id: number;
+  public readonly id: number = 0;
   public serviceId: number;
   public userId: number;
   public entrepreneurId: number;
+  public status: boolean;
+
   public service: Service;
   public entrepreneur: Entrepreneur;
   public user: User;
-  public status: boolean;
 
   public constructor(
-    id: number,
-    idService: number,
     idUser: number,
     idEntrepreneur: number,
-    service: Service,
-    entrepreneur: Entrepreneur,
-    user: User
+    idService: number
   ) {
-    this.id = id;
     this.serviceId = idService;
     this.userId = idUser;
     this.entrepreneurId = idEntrepreneur;
-    this.service = service;
-    this.entrepreneur = entrepreneur;
-    this.user = user;
     this.status = true
+    this.service = this.getService;
+    this.entrepreneur = this.getEntrepreneur;
+    this.user = this.getUser;
   }
+  get getService() { return this.service }
+  get getEntrepreneur() { return this.entrepreneur }
+  get getUser() { return this.user }
 }

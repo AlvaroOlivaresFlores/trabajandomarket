@@ -1,4 +1,5 @@
 import { Category } from "./category.enum";
+import { Entrepreneur } from "./entrepreneur";
 
 export class Service {
     public readonly id: number = 0;
@@ -10,7 +11,7 @@ export class Service {
     public images: Array<string> = [];
     public status: boolean = false;
     public deliveryTerm: number = 0;
-    public entrepreneurId
+    public entrepreneurId: number;
 
     public constructor(name: string, description: string, price: number, rating: number, category: Category, images: Array<string>, status: boolean, deliveryTerm: number, entrepreneurId: number){
         this.name = name;
@@ -23,5 +24,5 @@ export class Service {
         this.deliveryTerm = deliveryTerm;
         this.entrepreneurId = entrepreneurId;
     }
-
+    
 }

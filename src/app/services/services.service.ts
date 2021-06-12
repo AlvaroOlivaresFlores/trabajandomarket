@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Category } from '../models/category.enum';
+import { Entrepreneur } from '../models/entrepreneur';
+import { Region } from '../models/region.enum';
 import { Service } from '../models/service';
 
 @Injectable({
@@ -15,7 +17,7 @@ export class ServicesService {
   }
 
   getServices(){
-    return this.http.get<Service[]>("http://localhost:3000/services");
+    return this.http.get<Service[]>("http://localhost:3000/services?_expand=entrepreneur");
   }
   getService(id:number){
     return this.http.get<Service>("http://localhost:3000/service/"+id);

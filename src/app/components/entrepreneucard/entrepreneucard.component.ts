@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Category } from 'src/app/models/category.enum';
+import { Entrepreneur } from 'src/app/models/entrepreneur';
+import { Region } from 'src/app/models/region.enum';
 import { Service } from 'src/app/models/service';
 import { ServicesService } from 'src/app/services/services.service';
 
@@ -11,9 +13,9 @@ import { ServicesService } from 'src/app/services/services.service';
 export class EntrepreneucardComponent implements OnInit {
 
   constructor(private myServices: ServicesService) { 
-    this.service = new Service("","",0,0,Category.NONE,["",""],false,0,0);
+    this.service = new Service('', '', 0, 0, Category.NONE, ['', ''], false, 0,0);
   }
-
+  
   ngOnInit(): void {
   }
   @Input() service: Service;

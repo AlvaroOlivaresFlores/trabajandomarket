@@ -18,6 +18,6 @@ export class MyservicesviewComponent implements OnInit {
   }
 
   async loadEntrepreneurs() {
-    this.entrepreneurs = await this.entrepreneur.getUsers().toPromise();
+    this.entrepreneurs = await this.entrepreneur.getEntrepreneurs().toPromise();
   }
 }

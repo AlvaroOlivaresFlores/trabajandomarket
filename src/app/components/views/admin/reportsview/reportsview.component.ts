@@ -44,7 +44,7 @@ export class ReportsviewComponent implements OnInit {
   }
   async loadServices() {
     this.ELEMENT_DATA = await this.userc.getUsers().toPromise();
-    this.Entre_Data = await this.usere.getUsers().toPromise();
+    this.Entre_Data = await this.usere.getEntrepreneurs().toPromise();
     this.Report_Data = await this.reports.getReports().toPromise();
 
     this.dataSource = new MatTableDataSource<Report>(this.Report_Data);
