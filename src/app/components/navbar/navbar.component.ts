@@ -7,22 +7,22 @@ import { AuthService } from 'src/app/services/auth.service';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-  isentrepreneur:boolean=false;
-  user:User=new User("","",new Date,"","",Region.NONE,[],"",false);
-  constructor(private router: Router,private authservice:AuthService) {}
+  isentrepreneur: boolean = false;
+  user: User = new User('', '', new Date(), '', '', Region.NONE, [], '', false);
+  constructor(private router: Router, private authservice: AuthService) {}
 
   ngOnInit(): void {
     this.isEntrepreneur();
   }
-  async isEntrepreneur(){
-    this.user=await this.authservice.getCurrentUserLog();
+  async isEntrepreneur() {
+    this.user = await this.authservice.getCurrentUserLog();
   }
 
-  logout(){
-    localStorage.removeItem("token");
+  logout() {
+    localStorage.removeItem('token');
     this.router.navigate(['']);
   }
 }

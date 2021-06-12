@@ -10,7 +10,6 @@ import { SwiperModule } from 'swiper/angular';
 // Components
 import { AdminviewComponent } from './components/views/admin/adminview/adminview.component';
 import { LoginadminviewComponent } from './components/views/admin/loginadminview/loginadminview.component';
-import { BlockuserviewComponent } from './components/views/admin/blockuserview/blockuserview.component';
 import { AdmindashboardviewComponent } from './components/views/admin/admindashboardview/admindashboardview.component';
 import { ReportsviewComponent } from './components/views/admin/reportsview/reportsview.component';
 import { HomeviewComponent } from './components/views/users/homeview/homeview.component';
@@ -44,13 +43,13 @@ import { AdmindialogentrepreneurComponent } from './components/admindialogentrep
 import { UsertableComponent } from './components/usertable/usertable.component';
 import { EditservicedialogComponent } from './components/editservicedialog/editservicedialog.component';
 import { RemoveservicedialogComponent } from './components/removeservicedialog/removeservicedialog.component';
+import { RequestdialogComponent } from './components/requestdialog/requestdialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminviewComponent,
     LoginadminviewComponent,
-    BlockuserviewComponent,
     AdmindashboardviewComponent,
     ReportsviewComponent,
     HomeviewComponent,
@@ -84,6 +83,7 @@ import { RemoveservicedialogComponent } from './components/removeservicedialog/r
     UsertableComponent,
     EditservicedialogComponent,
     RemoveservicedialogComponent,
+    RequestdialogComponent,
   ],
   imports: [
     BrowserModule,

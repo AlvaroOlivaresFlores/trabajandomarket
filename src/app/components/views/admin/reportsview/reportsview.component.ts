@@ -1,12 +1,8 @@
-import { ThisReceiver } from '@angular/compiler';
-import { decimalDigest } from '@angular/compiler/src/i18n/digest';
-import { AfterViewInit, Component, ViewChild, OnInit } from '@angular/core';
-import { MatGridTileHeaderCssMatStyler } from '@angular/material/grid-list';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Entrepreneur } from 'src/app/models/entrepreneur';
-import { Region } from 'src/app/models/region.enum';
 import { User } from 'src/app/models/user';
 import { EntrepreneurService } from 'src/app/services/entrepreneur.service';
 import { UsersService } from 'src/app/services/users.service';
@@ -26,9 +22,14 @@ export class ReportsviewComponent implements OnInit {
   user_count: number;
   entre_count: number;
   entre_average: number;
-  d:string;
+  d: string;
 
-  displayedColumns: string[] = ['date', 'usuarios', 'emprendedores', 'porcentaje'];
+  displayedColumns: string[] = [
+    'date',
+    'usuarios',
+    'emprendedores',
+    'porcentaje',
+  ];
   ngOnInit(): void {
     this.loadServices();
   }
@@ -49,11 +50,11 @@ export class ReportsviewComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
- 
+
   constructor(
     private reports: ReportsService,
     private userc: UsersService,
-    private usere: EntrepreneurService,
+    private usere: EntrepreneurService
   ) {
     this.dataSource = new MatTableDataSource<Report>();
     this.ELEMENT_DATA = [];
@@ -62,16 +63,24 @@ export class ReportsviewComponent implements OnInit {
     this.user_count = 0;
     this.entre_count = 0;
     this.entre_average = 0;
-    this.d="";
-
+    this.d = '';
   }
-  addReport(){
-    this.d=new Date(Date.now()).toISOString();
+  addReport() {
+    this.d = new Date(Date.now()).toISOString();
     this.user_count = this.ELEMENT_DATA.length;
     this.entre_count = this.Entre_Data.length;
     this.entre_average = this.entre_count / this.user_count;
-    this.reports.addReport(new Report(new Date(this.d),this.user_count,this.entre_count,this.entre_average)).toPromise();
+    this.reports
+      .addReport(
+        new Report(
+          new Date(this.d),
+          this.user_count,
+          this.entre_count,
+          this.entre_average
+        )
+      )
+      .toPromise();
     console.log(this.user_count);
-    this.loadServices()
+    this.loadServices();
   }
 }

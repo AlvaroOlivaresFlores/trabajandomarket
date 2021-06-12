@@ -7,9 +7,8 @@ export class Entrepreneur extends User {
   public services: Array<Service>;
   public profilePicture: string;
   public description: string;
-  public userId:number;
+  public userId: number;
   public constructor(
-    
     firstname: string,
     lastname: string,
     birthday: Date,
@@ -20,9 +19,9 @@ export class Entrepreneur extends User {
     services: Array<Service>,
     profilePicture: string,
     description: string,
-    password:string,
-    isentrepreneur:boolean,
-    userid:number
+    password: string,
+    isentrepreneur: boolean,
+    userid: number
   ) {
     super(
       firstname,
@@ -33,12 +32,11 @@ export class Entrepreneur extends User {
       region,
       requests,
       password,
-      isentrepreneur,
+      isentrepreneur
     );
     this.services = services;
     this.profilePicture = profilePicture;
     this.description = description;
-    this.userId=userid;
+    this.userId = userid;
   }
-
 }

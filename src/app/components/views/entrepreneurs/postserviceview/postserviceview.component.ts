@@ -55,7 +55,7 @@ export class PostserviceviewComponent implements OnInit {
       .toPromise();
   }
 
-  xdcompleted(){}
+  xdcompleted() {}
   completed() {
     if (
       this.name != '' &&
@@ -68,6 +68,6 @@ export class PostserviceviewComponent implements OnInit {
     } else {
       this.isCompleted = false;
     }
-    console.log(this.isCompleted)
+    console.log(this.isCompleted);
   }
 }

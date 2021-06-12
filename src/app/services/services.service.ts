@@ -1,42 +1,47 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Category } from '../models/category.enum';
-import { Entrepreneur } from '../models/entrepreneur';
-import { Region } from '../models/region.enum';
 import { Service } from '../models/service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ServicesService {
-
   serviceSelected: Service;
 
-  constructor(private http: HttpClient) { 
-    this.serviceSelected = new Service("","",0,0,Category.NONE,["",""],false,0,0);
+  constructor(private http: HttpClient) {
+    this.serviceSelected = new Service(
+      '',
+      '',
+      0,
+      0,
+      Category.NONE,
+      ['', ''],
+      false,
+      0,
+      0
+    );
   }
 
-  getServices(){
-    return this.http.get<Service[]>("http://localhost:3000/services?_expand=entrepreneur");
+  getServices() {
+    return this.http.get<Service[]>(
+      'http://localhost:3000/services?_expand=entrepreneur'
+    );
   }
-  getService(id:number){
-    return this.http.get<Service>("http://localhost:3000/service/"+id);
+  getService(id: number) {
+    return this.http.get<Service>('http://localhost:3000/service/' + id);
   }
 
-  addService(service: Service){
-    return this.http.post("http://localhost:3000/services", service);
+  addService(service: Service) {
+    return this.http.post('http://localhost:3000/services', service);
   }
   editService(service: Service) {
-    return this.http.put("http://localhost:3000/services/"+service.id,service)
+    return this.http.put(
+      'http://localhost:3000/services/' + service.id,
+      service
+    );
   }
-  deleteService(service: Service){
-    return this.http.delete("http://localhost:3000/services/"+service.id)
-  }
-  
-  setServiceSelected(service: Service){
-    this.serviceSelected = service;
-  }
-  getServiceSelected(){
-    return this.serviceSelected;
+  deleteService(service: Service) {
+    return this.http.delete('http://localhost:3000/services/' + service.id);
   }
 }

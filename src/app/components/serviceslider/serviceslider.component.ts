@@ -1,7 +1,5 @@
-import { ChangeDetectorRef, Component, ViewChild, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Service } from 'src/app/models/service';
-import { SwiperComponent } from 'swiper/angular';
-
 
 import SwiperCore, {
   Navigation,
@@ -32,16 +30,9 @@ SwiperCore.use([
   styleUrls: ['./serviceslider.component.scss'],
 })
 export class ServicesliderComponent implements OnInit {
+  @Input() services: Array<Service> = [];
 
-  @Input()  services:Array<Service> = [];
+  constructor() {}
 
-  constructor() {
-
-  }
-  
-  ngOnInit(): void {
-
-  }
-
-
+  ngOnInit(): void {}
 }

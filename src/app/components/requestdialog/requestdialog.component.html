@@ -3,7 +3,7 @@
   <h3><b>Servicio:</b> {{ data.name }}</h3>
   <h3><b>Precio:</b> {{ data.price }} CLP</h3>
 </div>
-<div mat-dialog-actions align="end">
+<div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">Cancelar</button>
   <button mat-button [mat-dialog-close]="confirmService" cdkFocusInitial>Confirmar</button>
 </div>

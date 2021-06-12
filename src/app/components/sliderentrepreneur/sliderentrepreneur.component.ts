@@ -1,9 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Entrepreneur } from 'src/app/models/entrepreneur';
 import { Region } from 'src/app/models/region.enum';
 import { Service } from 'src/app/models/service';
 import { EntrepreneurService } from 'src/app/services/entrepreneur.service';
-import { ServicesService } from 'src/app/services/services.service';
 
 import SwiperCore, {
   Navigation,
@@ -17,7 +16,6 @@ import SwiperCore, {
   Controller,
 } from 'swiper/core';
 
-// install Swiper components
 SwiperCore.use([
   Navigation,
   Pagination,
@@ -35,7 +33,6 @@ SwiperCore.use([
   styleUrls: ['./sliderentrepreneur.component.scss'],
 })
 export class SliderentrepreneurComponent implements OnInit {
-
   currentUser: number = 1;
   myServices: Array<Service> = [];
 
@@ -44,15 +41,28 @@ export class SliderentrepreneurComponent implements OnInit {
     this.loadSerices();
   }
 
-  constructor(
-    private entrepreneursService: EntrepreneurService
-  ) {
-    this.entrepreneur = new Entrepreneur("","",new Date,"","",Region.REGIONMETROPOLITANA,[],[],"","","",false,0)
+  constructor(private entrepreneursService: EntrepreneurService) {
+    this.entrepreneur = new Entrepreneur(
+      '',
+      '',
+      new Date(),
+      '',
+      '',
+      Region.REGIONMETROPOLITANA,
+      [],
+      [],
+      '',
+      '',
+      '',
+      false,
+      0
+    );
   }
 
   async loadSerices() {
-    this.entrepreneur = await this.entrepreneursService.getEntrepreneur(this.currentUser).toPromise();
+    this.entrepreneur = await this.entrepreneursService
+      .getEntrepreneur(this.currentUser)
+      .toPromise();
     this.myServices = this.entrepreneur.services;
   }
-
 }

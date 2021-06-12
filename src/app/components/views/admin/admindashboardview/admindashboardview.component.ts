@@ -1,12 +1,4 @@
-import { ThisReceiver } from '@angular/compiler';
-import {
-  AfterViewInit,
-  Component,
-  ViewChild,
-  OnInit,
-  Input,
-} from '@angular/core';
-import { MatGridTileHeaderCssMatStyler } from '@angular/material/grid-list';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -14,8 +6,7 @@ import { Router } from '@angular/router';
 import { Region } from 'src/app/models/region.enum';
 import { User } from 'src/app/models/user';
 import { UsersService } from 'src/app/services/users.service';
-import {MatSnackBar} from '@angular/material/snack-bar';
-import {MatDialog} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { AdmindialogComponent } from 'src/app/components/admindialog/admindialog.component';
 import { AuthService } from 'src/app/services/auth.service';
 export interface UserData {
@@ -44,7 +35,7 @@ export class AdmindashboardviewComponent implements OnInit {
     'email',
     'gender',
     'region',
-    'button'
+    'button',
   ];
   ngOnInit(): void {
     this.loadServices();
@@ -61,24 +52,30 @@ export class AdmindashboardviewComponent implements OnInit {
     this.dataSource.sort = this.sort;
   }
 
-  
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-  constructor(private userc: UsersService, public dialog: MatDialog,private router: Router,private authservice:AuthService) {
-    this.dataSource=new MatTableDataSource<User>();
+  constructor(
+    private userc: UsersService,
+    public dialog: MatDialog,
+    private router: Router,
+    private authservice: AuthService
+  ) {
+    this.dataSource = new MatTableDataSource<User>();
     this.ELEMENT_DATA = [];
   }
 
-  openDialog(id:number) {
-    let dialogref=this.dialog.open(AdmindialogComponent,{
-      data:{
-        id: id
-      }
+  openDialog(id: number) {
+    let dialogref = this.dialog.open(AdmindialogComponent, {
+      data: {
+        id: id,
+      },
     });
-    dialogref.afterClosed().subscribe(result => {this.loadServices()});
+    dialogref.afterClosed().subscribe((result) => {
+      this.loadServices();
+    });
   }
-  logout(){
-    localStorage.removeItem("token");
+  logout() {
+    localStorage.removeItem('token');
     this.router.navigate(['adminlogin']);
   }
 }

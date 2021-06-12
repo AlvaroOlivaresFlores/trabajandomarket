@@ -1,6 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { Category } from 'src/app/models/category.enum';
 import { Service } from 'src/app/models/service';
 import { ServicesService } from 'src/app/services/services.service';

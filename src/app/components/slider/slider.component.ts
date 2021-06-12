@@ -31,7 +31,7 @@ SwiperCore.use([
   templateUrl: './slider.component.html',
 })
 export class SliderComponent {
-  @Input() images: Array<string>
+  @Input() images: Array<string>;
 
   @ViewChild('swiperRef', { static: false }) swiperRef?: SwiperComponent;
 
@@ -40,7 +40,6 @@ export class SliderComponent {
     this.thumbsSwiper = swiper;
   }
   constructor() {
-    this.images = []
+    this.images = [];
   }
-
 }
