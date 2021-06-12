@@ -9,7 +9,7 @@
       "gender": "Male",
       "region": "ATACAMA",
       "password": "Alvaro1234",
-      "isentrepreneur":true
+      "isentrepreneur": true
     },
     {
       "id": 2,
@@ -20,7 +20,7 @@
       "gender": "Male",
       "region": "METROPOLITANA",
       "password": "Joaquin1234",
-      "isentrepreneur":false
+      "isentrepreneur": false
     },
     {
       "id": 3,
@@ -31,7 +31,7 @@
       "gender": "Male",
       "region": "METROPOLITANA",
       "password": "Sebastian1234",
-      "isentrepreneur":true
+      "isentrepreneur": true
     },
     {
       "id": 4,
@@ -42,17 +42,17 @@
       "gender": "Male",
       "region": "METROPOLITANA",
       "password": "Fabian1234",
-      "isentrepreneur":false
+      "isentrepreneur": false
     }
   ],
   "entrepreneurs": [
     {
       "id": 1,
-      "userId":1,
+      "userId": 1,
       "firstname": "Alvaro",
       "lastname": "Olivares",
       "birthdate": "1998-06-07T04:00:00.000Z",
-      "email": "trhoades0@noaa.gov",
+      "email": "alvaro.olivares@trabajandomarket.cl",
       "gender": "Male",
       "region": "ATACAMA",
       "profilepicture": "https://via.placeholder.com/40x40",
@@ -60,7 +60,7 @@
     },
     {
       "id": 2,
-      "userId":3,
+      "userId": 3,
       "firstname": "Sebastian",
       "lastname": "Aguirre",
       "birthdate": "2000-02-07T04:00:00.000Z",
@@ -351,13 +351,6 @@
       "status": true
     },
     {
-      "id": 2,
-      "userId": 4,
-      "entrepreneurId": 2,
-      "serviceId": 5,
-      "status": true
-    },
-    {
       "id": 3,
       "userId": 1,
       "entrepreneurId": 2,
@@ -368,46 +361,42 @@
   "reports": [
     {
       "id": 1,
-      "date": "3/24/2020",
+      "date": "2020-03-24T09:20:50.390Z",
       "users": 9,
       "entres": 2,
       "porc": 0.62
     },
     {
       "id": 2,
-      "date": "12/31/2020",
-      "users": 8,
-      "entres": 4,
-      "porc": 0.48
+      "date": "2021-06-11T09:20:50.390Z",
+      "users": 4,
+      "entres": 2,
+      "porc": 0.5,
+      "createdAt": 1623402406700
     },
     {
       "id": 3,
-      "date": "12/15/2020",
-      "users": 10,
-      "entres": 5,
-      "porc": 0.88
+      "date": "2021-06-11T09:20:50.390Z",
+      "users": 4,
+      "entres": 2,
+      "porc": 0.5,
+      "createdAt": 1623402688513
     },
     {
       "id": 4,
-      "date": "3/1/2021",
-      "users": 7,
-      "entres": 1,
-      "porc": 0.5
-    },
-    {
-      "id": 5,
-      "date": "4/14/2021",
-      "users": 9,
-      "entres": 5,
-      "porc": 0.58
+      "date": "2021-06-11T09:20:50.390Z",
+      "users": 4,
+      "entres": 2,
+      "porc": 0.5,
+      "createdAt": 1623403250394
     }
   ],
-  "admins":[
+  "admins": [
     {
-      "Id":"1",
-      "name":"Joaquin",
-      "email":"joaquinvidal@mayor.cl",
-      "password":"AdminJoaquin1234"
+      "Id": "1",
+      "name": "Joaquin",
+      "email": "joaquinvidal@mayor.cl",
+      "password": "AdminJoaquin1234"
     }
   ]
 }

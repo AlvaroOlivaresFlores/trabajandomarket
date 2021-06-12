@@ -8,21 +8,21 @@
     <th mat-header-cell *matHeaderCellDef mat-sort-header>
       Cantidad de Usuarios
     </th>
-    <td mat-cell *matCellDef="let element">{{ element.users }}</td>
+    <td class="c"mat-cell *matCellDef="let element">{{ element.users }}</td>
   </ng-container>
 
   <ng-container matColumnDef="emprendedores">
     <th mat-header-cell *matHeaderCellDef mat-sort-header>
       Cantidad de Emprendedores
     </th>
-    <td mat-cell *matCellDef="let element">{{ element.entres }}</td>
+    <td class="c" mat-cell *matCellDef="let element">{{ element.entres }}</td>
   </ng-container>
 
   <ng-container matColumnDef="porcentaje">
     <th mat-header-cell *matHeaderCellDef mat-sort-header>
       Porcentajes de usuarios Emprendedores
     </th>
-    <td mat-cell *matCellDef="let element">
+    <td class="c" mat-cell *matCellDef="let element">
       {{ element.porc }}
     </td>
   </ng-container>

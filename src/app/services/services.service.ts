@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Category } from '../models/category.enum';
+import { Entrepreneur } from '../models/entrepreneur';
 import { Service } from '../models/service';
 
 @Injectable({
@@ -20,6 +21,7 @@ export class ServicesService {
   getService(id:number){
     return this.http.get<Service>("http://localhost:3000/service/"+id);
   }
+
   addService(service: Service){
     return this.http.post("http://localhost:3000/services", service);
   }

@@ -27,8 +27,6 @@ export class ReportsviewComponent implements OnInit {
   entre_count: number;
   entre_average: number;
   d:string;
-  m:string;
-  y:string;
 
   displayedColumns: string[] = ['date', 'usuarios', 'emprendedores', 'porcentaje'];
   ngOnInit(): void {
@@ -44,7 +42,7 @@ export class ReportsviewComponent implements OnInit {
   }
   async loadServices() {
     this.ELEMENT_DATA = await this.userc.getUsers().toPromise();
-    this.Entre_Data = await this.usere.getUsers().toPromise();
+    this.Entre_Data = await this.usere.getEntrepreneurs().toPromise();
     this.Report_Data = await this.reports.getReports().toPromise();
 
     this.dataSource = new MatTableDataSource<Report>(this.Report_Data);
@@ -65,18 +63,14 @@ export class ReportsviewComponent implements OnInit {
     this.entre_count = 0;
     this.entre_average = 0;
     this.d="";
-    this.m="";
-    this.y="";
+
   }
   addReport(){
-    let dat:Date=new Date(Date.now());
+    this.d=new Date(Date.now()).toISOString();
     this.user_count = this.ELEMENT_DATA.length;
     this.entre_count = this.Entre_Data.length;
     this.entre_average = this.entre_count / this.user_count;
-    this.d=dat.getDate().toString();
-    this.m=(dat.getMonth()+1).toString();
-    this.y=dat.getFullYear().toString();
-    this.reports.addReport(new Report(this.m+"/"+this.d+"/"+this.y,this.user_count,this.entre_count,this.entre_average)).toPromise();
+    this.reports.addReport(new Report(new Date(this.d),this.user_count,this.entre_count,this.entre_average)).toPromise();
     console.log(this.user_count);
     this.loadServices()
   }

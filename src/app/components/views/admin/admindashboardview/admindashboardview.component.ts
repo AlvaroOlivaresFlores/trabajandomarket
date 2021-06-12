@@ -17,6 +17,7 @@ import { UsersService } from 'src/app/services/users.service';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {MatDialog} from '@angular/material/dialog';
 import { AdmindialogComponent } from 'src/app/components/admindialog/admindialog.component';
+import { AuthService } from 'src/app/services/auth.service';
 export interface UserData {
   id: number;
   name: string;
@@ -63,7 +64,7 @@ export class AdmindashboardviewComponent implements OnInit {
   
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-  constructor(private userc: UsersService, public dialog: MatDialog,private router: Router) {
+  constructor(private userc: UsersService, public dialog: MatDialog,private router: Router,private authservice:AuthService) {
     this.dataSource=new MatTableDataSource<User>();
     this.ELEMENT_DATA = [];
   }

@@ -17,6 +17,12 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 import {MatDialog} from '@angular/material/dialog';
 import { AdmindialogentrepreneurComponent } from 'src/app/components/admindialogentrepreneur/admindialogentrepreneur.component';
 import { EntrepreneurService } from 'src/app/services/entrepreneur.service';
+import { User } from 'src/app/models/user';
+import { Service } from 'src/app/models/service';
+import { ServicesService } from 'src/app/services/services.service';
+import { Category } from 'src/app/models/category.enum';
+import { U } from '@angular/cdk/keycodes';
+
 
 
 export interface UserData {
@@ -36,6 +42,7 @@ export interface UserData {
 })
 export class AdmindashboardentrepreneurviewComponent implements OnInit {
   ELEMENT_DATA: Entrepreneur[];
+  Entres:Array<Service>;
   dataSource: MatTableDataSource<Entrepreneur>;
   displayedColumns: string[] = [
     'id',
@@ -57,19 +64,19 @@ export class AdmindashboardentrepreneurviewComponent implements OnInit {
   }
 
   async loadServices() {
-    this.ELEMENT_DATA = await this.userc.getUsers().toPromise();
+    this.ELEMENT_DATA = await this.userc.getEntrepreneurs().toPromise();
     this.dataSource = new MatTableDataSource<Entrepreneur>(this.ELEMENT_DATA);
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
-    
   }
 
   
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-  constructor(private userc: EntrepreneurService, public dialog: MatDialog) {
+  constructor(private userc: EntrepreneurService, public dialog: MatDialog,private s:ServicesService) {
     this.dataSource=new MatTableDataSource<Entrepreneur>();
     this.ELEMENT_DATA = [];
+    this.Entres=[];
   }
 
   openDialog(id:number) {
