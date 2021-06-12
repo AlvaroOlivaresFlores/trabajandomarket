@@ -17,6 +17,7 @@ export class PostserviceviewComponent implements OnInit {
   images: Array<string>;
   entrepreneurId: number;
   currentUser: number = 2;
+  isCompleted: boolean = false;
 
   constructor(private servicesService: ServicesService) {
     this.name = '';
@@ -52,5 +53,21 @@ export class PostserviceviewComponent implements OnInit {
         )
       )
       .toPromise();
+  }
+
+  xdcompleted(){}
+  completed() {
+    if (
+      this.name != '' &&
+      this.description != '' &&
+      this.price != '' &&
+      this.deliveryTerm != '' &&
+      this.category != Category.NONE
+    ) {
+      this.isCompleted = true;
+    } else {
+      this.isCompleted = false;
+    }
+    console.log(this.isCompleted)
   }
 }

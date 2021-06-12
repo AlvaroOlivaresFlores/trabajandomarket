@@ -1,0 +1,9 @@
+<h1 mat-dialog-title>¿Estas seguro que deseas contrar el servicio?</h1>
+<div mat-dialog-content>
+  <h3><b>Servicio:</b> {{ data.name }}</h3>
+  <h3><b>Precio:</b> {{ data.price }} CLP</h3>
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button [mat-dialog-close]="confirmService" cdkFocusInitial>Confirmar</button>
+</div>

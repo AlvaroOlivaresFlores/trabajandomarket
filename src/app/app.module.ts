@@ -42,6 +42,7 @@ import { EntrepreneurtableComponent } from './components/entrepreneurtable/entre
 import { AdmindashboardentrepreneurviewComponent } from './components/views/admin/admindashboardentrepreneurview/admindashboardentrepreneurview.component';
 import { AdmindialogentrepreneurComponent } from './components/admindialogentrepreneur/admindialogentrepreneur.component';
 import { UsertableComponent } from './components/usertable/usertable.component';
+import { ServicedialogComponent } from './components/servicedialog/servicedialog.component';
 
 @NgModule({
   declarations: [
@@ -80,6 +81,7 @@ import { UsertableComponent } from './components/usertable/usertable.component';
     AdmindashboardentrepreneurviewComponent,
     AdmindialogentrepreneurComponent,
     UsertableComponent,
+    ServicedialogComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Category } from 'src/app/models/category.enum';
+import { Entrepreneur } from 'src/app/models/entrepreneur';
+import { Region } from 'src/app/models/region.enum';
 import { Service } from 'src/app/models/service';
 import { ServicesService } from 'src/app/services/services.service';
 
@@ -17,8 +19,7 @@ export class ServicecardComponent implements OnInit {
 
 
   constructor(private selectedService: ServicesService) {
-
-    this.service = new Service("","",0,0,Category.NONE,["",""],false,0,0);
+    this.service =  new Service('', '', 0, 0, Category.NONE, ['', ''], false, 0,0);
   }
 
   categoryStr(): string {
@@ -37,6 +38,8 @@ export class ServicecardComponent implements OnInit {
 
   changeSelectedService() {
     this.selectedService.setServiceSelected(this.service)
+    const serviceId = localStorage.setItem("s",this.service.id.toString())
+    const entrepreneurId = localStorage.setItem("e",this.service.entrepreneurId.toString())
   }
 
 }
