@@ -1,0 +1,33 @@
+<h1 mat-dialog-title>Editar Servicio</h1>
+<div mat-dialog-content class="center-xs">
+  <mat-form-field class="dialogwidth" appearance="outline">
+    <mat-label >Nombre</mat-label>
+    <input matInput [(ngModel)]="data.name" name="name" />
+  </mat-form-field>
+  <mat-form-field class="dialogwidth" appearance="outline">
+    <mat-label>Descripcion</mat-label>
+    <input matInput [(ngModel)]="data.description" name="description"/> </mat-form-field
+  ><mat-form-field class="dialogwidth" appearance="outline" >
+    <mat-label>Precio</mat-label>
+    <input matInput [(ngModel)]="data.price" name="price"/>
+    <span matSuffix>CLP</span>
+  </mat-form-field>
+  <mat-form-field class="dialogwidth" appearance="outline">
+    <mat-label>Categoria</mat-label>
+    <mat-select required [(ngModel)]="data.category" name="category">
+      <mat-option value="WEBDEVELOPMENT">Desarrollo Web</mat-option>
+      <mat-option value="DIGITALMARKETING">Marketing Digital</mat-option>
+      <mat-option value="GRAPHICDESING">Diseño Grafico</mat-option>
+      <mat-option value="VIDEOEDITING">Edicion de Video</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field class="dialogwidth" appearance="outline">
+    <mat-label>Tiempo de entrega</mat-label>
+    <input matInput [(ngModel)]="data.deliveryTerm" min="1" type="number" name="time"/>
+    <span matSuffix>Dias</span>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="noteditservice()">Cancelar</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitialn (click)="editarinfo()">Confirmar Edicion</button>
+</div>

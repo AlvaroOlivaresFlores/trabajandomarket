@@ -396,12 +396,12 @@
       "porc": 0.58
     }
   ],
-  "admins":[
+  "admins": [
     {
-      "Id":"1",
-      "name":"Joaquin",
-      "email":"joaquinvidal@mayor.cl",
-      "password":"AdminJoaquin1234"
+      "Id": "1",
+      "name": "Joaquin",
+      "email": "joaquinvidal@mayor.cl",
+      "password": "AdminJoaquin1234"
     }
   ]
 }

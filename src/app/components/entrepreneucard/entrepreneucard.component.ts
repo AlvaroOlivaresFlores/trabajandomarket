@@ -1,7 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Category } from 'src/app/models/category.enum';
 import { Service } from 'src/app/models/service';
 import { ServicesService } from 'src/app/services/services.service';
+import { EditservicedialogComponent } from '../editservicedialog/editservicedialog.component';
+import { RemoveservicedialogComponent } from '../removeservicedialog/removeservicedialog.component';
 
 @Component({
   selector: 'app-entrepreneucard',
@@ -10,8 +13,20 @@ import { ServicesService } from 'src/app/services/services.service';
 })
 export class EntrepreneucardComponent implements OnInit {
 
-  constructor(private myServices: ServicesService) { 
+  constructor(private myServices: ServicesService, public dialog: MatDialog) { 
     this.service = new Service("","",0,0,Category.NONE,["",""],false,0,0);
+  }
+  openDialog(service:Service){
+    this.dialog.open(EditservicedialogComponent,{
+      width: '350px',
+      data:service
+    });
+  }
+  openDialogRemove(service: Service){
+    this.dialog.open(RemoveservicedialogComponent,{
+      width: '350px',
+      data:service
+    });
   }
 
   ngOnInit(): void {
