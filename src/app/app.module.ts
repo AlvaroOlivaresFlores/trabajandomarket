@@ -44,6 +44,8 @@ import { UsertableComponent } from './components/usertable/usertable.component';
 import { EditservicedialogComponent } from './components/editservicedialog/editservicedialog.component';
 import { RemoveservicedialogComponent } from './components/removeservicedialog/removeservicedialog.component';
 import { RequestdialogComponent } from './components/requestdialog/requestdialog.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import { FilterCategoryPipe } from './pipes/filter-category.pipe';
 
 @NgModule({
   declarations: [
@@ -84,6 +86,8 @@ import { RequestdialogComponent } from './components/requestdialog/requestdialog
     EditservicedialogComponent,
     RemoveservicedialogComponent,
     RequestdialogComponent,
+    FilterPipe,
+    FilterCategoryPipe,
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
-<app-searchbar></app-searchbar>
+<app-searchbar (event)="receiveSearchText($event)" (event2)="changeCategory($event)"></app-searchbar>
 <section class="container main">
     <div class="row around-xs">
-      <div class="box" *ngFor="let service of services">
+      <div class="box" *ngFor="let service of services | filter:searchText | filterCategory:category ">
         <app-servicecard
           [service]="service"
         ></app-servicecard>

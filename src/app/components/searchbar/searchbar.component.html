@@ -13,7 +13,7 @@
                 appearance="outline"
               >
                 <mat-label>Buscar Servico</mat-label>
-                <input type="search" matInput />
+                <input (ngModelChange)="sendSearchText()" [(ngModel)]="searchText" type="search" matInput />
                 <mat-icon matSuffix>search</mat-icon>
               </mat-form-field>
             </div>
@@ -23,11 +23,12 @@
                 style="margin-bottom: -1.25em; width: 100%"
               >
                 <mat-label>Categoria</mat-label>
-                <mat-select>
-                  <mat-option value="one">Marketing Digital</mat-option>
-                  <mat-option value="two">Diseño Grafico</mat-option>
-                  <mat-option value="two">Edicion de Video</mat-option>
-                  <mat-option value="two">Desarrollo Web</mat-option>
+                <mat-select [(ngModel)]="category" (ngModelChange)="changeCategory()">
+                  <mat-option value="NONE">Ninguna</mat-option>
+                  <mat-option value="DIGITALMARKETING">Marketing Digital</mat-option>
+                  <mat-option value="GRAPHICDESING">Diseño Grafico</mat-option>
+                  <mat-option value="VIDEOEDITING">Edicion de Video</mat-option>
+                  <mat-option value="WEBDEVELOPMENT">Desarrollo Web</mat-option>
                 </mat-select>
               </mat-form-field>
             </div>
