@@ -23,7 +23,7 @@ export class UsertableComponent implements AfterViewInit {
   }
 
   async loadRequests() {
-    this.currentUser = this.authservice.getCurrentUserLog().id;
+    this.currentUser = this.authservice.getCurrentUser().id;
     this.requests = await this.requestsService
       .getRequestedServices(this.currentUser)
       .toPromise();

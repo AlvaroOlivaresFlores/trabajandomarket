@@ -1,14 +1,14 @@
 <mat-card class="card">
   <mat-card-header>
-    <mat-card-title>{{ service.name }}</mat-card-title>
+    <mat-card-title class="title">{{ service.name }}</mat-card-title>
     <mat-card-subtitle>{{ categoryStr() }}</mat-card-subtitle>
   </mat-card-header>
   <img mat-card-image src="http://via.placeholder.com/250x200" alt="Photo of a Shiba Inu">
   <mat-card-content>
     <p>{{ service.description }}</p>
-    <span>Precio: {{ service.price }}</span>
+    <h3>Precio: {{ service.price }} CLP</h3>
   </mat-card-content>
-  <mat-card-actions>
+  <mat-card-actions align="end">
     <button mat-button (click)="openDialog(service)">Editar</button>
     <button mat-button color="warn"(click)="openDialogRemove(service)">Eliminar</button>
   </mat-card-actions>

@@ -101,7 +101,7 @@ export class HireserviceviewComponent implements OnInit {
         this.requestsService
           .addRequest(
             new Request(
-              this.authService.getCurrentUserLog().id,
+              this.authService.getCurrentUser().id,
               this.entrepreneur.id,
               this.service.id
             )

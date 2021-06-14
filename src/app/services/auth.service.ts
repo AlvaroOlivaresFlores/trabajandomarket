@@ -24,17 +24,17 @@ export class AuthService {
     const decode = helper.decodeToken(<string>token);
 
     if (token) {
-      this.setCurrentUserLog(decode);
+      this.setCurrentUser(decode);
       return !helper.isTokenExpired(token);
     } else {
       return false;
     }
   }
 
-  setCurrentUserLog(currentUserLog: User) {
+  setCurrentUser(currentUserLog: User) {
     this.currentUserLog = currentUserLog;
   }
-  getCurrentUserLog() {
+  getCurrentUser() {
     return this.currentUserLog;
   }
 }

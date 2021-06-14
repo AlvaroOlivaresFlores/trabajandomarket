@@ -36,6 +36,12 @@ export class EntrepreneurService {
       'http://localhost:3000/entrepreneurs/' + id + '?_embed=services'
     );
   }
+  getEntrepreneurByUserId(id: number) {
+    return this.http.get<Entrepreneur[]>(
+      'http://localhost:3000/entrepreneurs?_embed=services&userId=' + id
+    );
+  }
+
   deleteUser(id: number) {
     return this.http.delete('http://localhost:3000/entrepreneurs/' + id);
   }

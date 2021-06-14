@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Entrepreneur } from 'src/app/models/entrepreneur';
-import { Region } from 'src/app/models/region.enum';
 import { Service } from 'src/app/models/service';
+import { AuthService } from 'src/app/services/auth.service';
 import { EntrepreneurService } from 'src/app/services/entrepreneur.service';
 
 import SwiperCore, {
@@ -33,36 +33,23 @@ SwiperCore.use([
   styleUrls: ['./sliderentrepreneur.component.scss'],
 })
 export class SliderentrepreneurComponent implements OnInit {
-  currentUser: number = 1;
   myServices: Array<Service> = [];
+  entrepreneur: Array<Entrepreneur>
 
-  public entrepreneur: Entrepreneur;
+
   ngOnInit(): void {
     this.loadSerices();
   }
 
-  constructor(private entrepreneursService: EntrepreneurService) {
-    this.entrepreneur = new Entrepreneur(
-      '',
-      '',
-      new Date(),
-      '',
-      '',
-      Region.REGIONMETROPOLITANA,
-      [],
-      [],
-      '',
-      '',
-      '',
-      false,
-      0
-    );
+  constructor(private entrepreneursService: EntrepreneurService, private authService: AuthService) {
+    this.entrepreneur = []
   }
 
   async loadSerices() {
     this.entrepreneur = await this.entrepreneursService
-      .getEntrepreneur(this.currentUser)
+      .getEntrepreneurByUserId(this.authService.getCurrentUser().id)
       .toPromise();
-    this.myServices = this.entrepreneur.services;
+    this.myServices = this.entrepreneur[0].services;
   }
+  
 }

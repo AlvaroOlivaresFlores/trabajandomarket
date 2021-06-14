@@ -9,11 +9,14 @@
   <div class="row cennter-xs">
     <div class="col-xs-12 col-lg-8 colservice">
       <mat-card>
-        <h1>{{service.name}}</h1>
+        <h1>{{ service.name }}</h1>
         <mat-card-header>
           <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>{{entrepreneur.firstname + entrepreneur.lastname}}</mat-card-title>
-          <mat-card-subtitle>{{categoryStr()}}</mat-card-subtitle>
+          <mat-card-title
+            >{{ entrepreneur.firstname }}
+            {{ entrepreneur.lastname }}</mat-card-title
+          >
+          <mat-card-subtitle>{{ categoryStr() }}</mat-card-subtitle>
         </mat-card-header>
         <div class="divimg">
           <app-slider class="slider" [images]="service.images"></app-slider>
@@ -21,7 +24,7 @@
         <div class="servicedescription">
           <h1>Descripción</h1>
           <p>
-            {{service.description}}
+            {{ service.description }}
           </p>
         </div>
       </mat-card>
@@ -38,7 +41,7 @@
                   <h2 class="mid"><mat-icon>category</mat-icon> Categoria:</h2>
                 </div>
                 <div class="col">
-                  <h2>{{categoryStr()}}</h2>
+                  <h2>{{ categoryStr() }}</h2>
                 </div>
               </div>
               <div class="row between-xs middle-xs">
@@ -48,7 +51,7 @@
                   </h2>
                 </div>
                 <div class="col">
-                  <h2>{{service.deliveryTerm}} Dias</h2>
+                  <h2>{{ service.deliveryTerm }} Dias</h2>
                 </div>
               </div>
               <div class="row between-xs middle-xs">
@@ -58,7 +61,9 @@
                   </h2>
                 </div>
                 <div class="col">
-                  <h2 class="mid">{{service.rating}} <mat-icon>star</mat-icon></h2>
+                  <h2 class="mid">
+                    {{ service.rating }} <mat-icon>star</mat-icon>
+                  </h2>
                 </div>
               </div>
               <div class="row between-xs middle-xs">
@@ -66,10 +71,15 @@
                   <h2 class="mid"><mat-icon>payments</mat-icon> Precio:</h2>
                 </div>
                 <div class="col">
-                  <h2>{{service.price}} CLP</h2>
+                  <h2>{{ service.price }} CLP</h2>
                 </div>
               </div>
-              <button (click)="requestService()" class="btn" mat-raised-button color="primary">
+              <button
+                (click)="requestService()"
+                class="btn"
+                mat-raised-button
+                color="primary"
+              >
                 Contratar Servicio
               </button>
             </div>

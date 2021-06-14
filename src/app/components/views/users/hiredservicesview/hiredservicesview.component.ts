@@ -24,7 +24,7 @@ export class HiredservicesviewComponent implements OnInit {
   }
 
   async loadServices() {
-    this.currentUser = this.authservice.getCurrentUserLog().id;
+    this.currentUser = this.authservice.getCurrentUser().id;
     this.username = (
       await this.usersService.getUser(this.currentUser).toPromise()
     ).firstname;

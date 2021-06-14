@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Category } from 'src/app/models/category.enum';
 import { Service } from 'src/app/models/service';
+import { AuthService } from 'src/app/services/auth.service';
 import { ServicesService } from 'src/app/services/services.service';
 
 @Component({
@@ -16,10 +17,9 @@ export class PostserviceviewComponent implements OnInit {
   deliveryTerm: string;
   images: Array<string>;
   entrepreneurId: number;
-  currentUser: number = 2;
   isCompleted: boolean = false;
 
-  constructor(private servicesService: ServicesService) {
+  constructor(private servicesService: ServicesService, private authService: AuthService) {
     this.name = '';
     this.description = '';
     this.price = '';
@@ -49,13 +49,12 @@ export class PostserviceviewComponent implements OnInit {
           this.images,
           true,
           parseInt(this.deliveryTerm),
-          this.currentUser
+          this.authService.getCurrentUser().id
         )
       )
       .toPromise();
   }
 
-  xdcompleted() {}
   completed() {
     if (
       this.name != '' &&

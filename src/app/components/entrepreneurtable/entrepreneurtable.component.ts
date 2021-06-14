@@ -4,6 +4,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Request } from 'src/app/models/request';
+import { AuthService } from 'src/app/services/auth.service';
 import { RequestService } from 'src/app/services/request.service';
 
 @Component({
@@ -32,7 +33,8 @@ export class EntrepreneurtableComponent implements OnInit {
   }
   constructor(
     public dialog: MatDialog,
-    private requestsService: RequestService
+    private requestsService: RequestService,
+    private authService: AuthService
   ) {
     this.dataSource = new MatTableDataSource<
       [number, string, string, number, string]
@@ -40,7 +42,7 @@ export class EntrepreneurtableComponent implements OnInit {
   }
   async loadRequestsEntrepreneur() {
     this.requestsEntrepreneur = await this.requestsService
-      .getRequestedEntrepreneur(this.currentUser)
+      .getRequestedEntrepreneur(this.authService.getCurrentUser().id)
       .toPromise();
     this.requestsEntrepreneur.forEach((r, i) => {
       let index = i + 1;

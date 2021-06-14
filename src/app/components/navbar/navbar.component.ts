@@ -18,7 +18,7 @@ export class NavbarComponent implements OnInit {
     this.isEntrepreneur();
   }
   async isEntrepreneur() {
-    this.user = await this.authservice.getCurrentUserLog();
+    this.user = await this.authservice.getCurrentUser();
   }
 
   logout() {
