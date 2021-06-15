@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Entrepreneur } from 'src/app/models/entrepreneur';
+
 import { Service } from 'src/app/models/service';
 import { AuthService } from 'src/app/services/auth.service';
 import { EntrepreneurService } from 'src/app/services/entrepreneur.service';
@@ -51,5 +52,4 @@ export class SliderentrepreneurComponent implements OnInit {
       .toPromise();
     this.myServices = this.entrepreneur[0].services;
   }
-  
 }

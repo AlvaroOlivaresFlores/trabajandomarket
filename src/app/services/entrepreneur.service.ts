@@ -41,8 +41,10 @@ export class EntrepreneurService {
       'http://localhost:3000/entrepreneurs?_embed=services&userId=' + id
     );
   }
-
-  deleteUser(id: number) {
+  addEntrepreneur(entrepreneur: Entrepreneur) {
+    return this.http.post('http://localhost:3000/entrepreneurs', entrepreneur);
+  }
+  deleteEntrepreneur(id: number) {
     return this.http.delete('http://localhost:3000/entrepreneurs/' + id);
   }
 }

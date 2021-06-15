@@ -32,14 +32,19 @@ export class EntrepreneucardComponent implements OnInit {
     });
   }
   openDialogRemove(service: Service) {
-    this.dialog.open(RemoveservicedialogComponent, {
+    const dialogRef = this.dialog.open(RemoveservicedialogComponent, {
       width: '350px',
       data: service,
+    });
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('The dialog was closed');
+      this.serviceDeleted = result;
     });
   }
 
   ngOnInit(): void {}
   @Input() service: Service;
+  serviceDeleted: boolean = false;
 
   categoryStr(): string {
     if (this.service.category.toString() === 'DIGITALMARKETING') {

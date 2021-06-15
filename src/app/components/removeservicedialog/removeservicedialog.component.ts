@@ -18,6 +18,7 @@ export class RemoveservicedialogComponent implements OnInit {
   ngOnInit(): void {}
   removeservice() {
     this.service.deleteService(this.data).toPromise();
+    location.reload();
   }
   notremoveservice() {
     this.dialogRef.close();
