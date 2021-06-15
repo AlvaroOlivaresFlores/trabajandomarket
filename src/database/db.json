@@ -18,7 +18,7 @@
       "birthdate": "2000-02-07T04:00:00.000Z",
       "email": "joaquinvidal@mayor.cl",
       "gender": "Male",
-      "region": "METROPOLITANA",
+      "region": "REGIONMETROPOLITANA",
       "password": "Joaquin1234",
       "isentrepreneur": false
     },
@@ -29,7 +29,7 @@
       "birthdate": "2000-02-07T04:00:00.000Z",
       "email": "seba_aguirre@gmail.com",
       "gender": "Male",
-      "region": "METROPOLITANA",
+      "region": "REGIONMETROPOLITANA",
       "password": "Sebastian1234",
       "isentrepreneur": true
     },
@@ -40,25 +40,12 @@
       "birthdate": "1998-02-07T04:00:00.000Z",
       "email": "fabian_o98@hotmail.com",
       "gender": "Male",
-      "region": "METROPOLITANA",
+      "region": "REGIONMETROPOLITANA",
       "password": "Fabian1234",
       "isentrepreneur": false
     },
     {
       "id": 5,
-      "firstname": "asdas",
-      "lastname": "asdasd",
-      "birthdate": "1990-02-08T03:00:00.000Z",
-      "email": "123",
-      "gender": "Male",
-      "region": "ARICAPARINACOTA",
-      "requests": [],
-      "password": "123",
-      "isentrepreneur": false,
-      "createdAt": 1623731274911
-    },
-    {
-      "id": 6,
       "firstname": "Juan",
       "lastname": "Maldonado",
       "birthdate": "1990-01-01T03:00:00.000Z",
@@ -91,7 +78,7 @@
       "birthdate": "2000-02-07T04:00:00.000Z",
       "email": "seba_aguirre@gmail.com",
       "gender": "Male",
-      "region": "METROPOLITANA",
+      "region": "REGIONMETROPOLITANA",
       "profilepicture": "https://via.placeholder.com/40x40",
       "description": "Esta es tu descripción como emprendedor, da información acerca de tu persona destacando tus competencias."
     },
@@ -109,7 +96,7 @@
       "services": [],
       "profilePicture": "https://via.placeholder.com/400x200",
       "description": "hola",
-      "userId": 6,
+      "userId": 5,
       "createdAt": 1623731669850
     }
   ],
@@ -390,14 +377,6 @@
       "createdAt": 1623654771937
     },
     {
-      "id": 7,
-      "serviceId": 9,
-      "userId": 5,
-      "entrepreneurId": 1,
-      "status": true,
-      "createdAt": 1623731328448
-    },
-    {
       "id": 8,
       "serviceId": 13,
       "userId": 2,
@@ -408,7 +387,7 @@
     {
       "id": 9,
       "serviceId": 2,
-      "userId": 6,
+      "userId": 5,
       "entrepreneurId": 2,
       "status": true,
       "createdAt": 1623731810597
@@ -416,7 +395,7 @@
     {
       "id": 10,
       "serviceId": 8,
-      "userId": 6,
+      "userId": 5,
       "entrepreneurId": 2,
       "status": true,
       "createdAt": 1623731815092
@@ -424,7 +403,7 @@
     {
       "id": 11,
       "serviceId": 11,
-      "userId": 6,
+      "userId": 5,
       "entrepreneurId": 1,
       "status": true,
       "createdAt": 1623731835023
