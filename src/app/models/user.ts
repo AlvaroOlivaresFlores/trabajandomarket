@@ -2,7 +2,7 @@ import { Region } from './region.enum';
 import { Request } from './request';
 
 export class User {
-  public readonly id: number = 0;
+  public id: number = 0;
   public firstname: string;
   public lastname: string;
   public birthdate: Date;

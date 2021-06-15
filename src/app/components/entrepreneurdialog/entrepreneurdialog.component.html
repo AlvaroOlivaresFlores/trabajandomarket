@@ -5,31 +5,16 @@
       <mat-divider></mat-divider>
       <br />
       <mat-form-field appearance="outline" class="full-width">
-        <mat-label>Descripcion Personal</mat-label>
-        <textarea matInput placeholder="Yo soy..."></textarea>
+        <mat-label >Descripcion Personal</mat-label>
+        <textarea [(ngModel)]="description" name="description" matInput placeholder="Yo soy..."></textarea>
       </mat-form-field>
       <div class="row">
-        <mat-form-field>
-          <mat-label>Tipo de servicio</mat-label>
-          <mat-chip-list #chipList aria-label="Tipo selection">
-            <mat-chip
-              *ngFor="let tipo of tipos"
-              [selectable]="selectable"
-              [removable]="removable"
-              (removed)="remove(tipo)"
-            >
-              {{ tipo.name }}
-              <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
-            </mat-chip>
-            <input
-              placeholder="Nuevo Servicio..."
-              [matChipInputFor]="chipList"
-              [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-              [matChipInputAddOnBlur]="addOnBlur"
-              (matChipInputTokenEnd)="add($event)"
-            />
-          </mat-chip-list>
-        </mat-form-field>
+        <mat-card class="example-card">
+          <img mat-card-image src="https://via.placeholder.com/400x200" alt="">
+          <mat-card-actions>
+            <button mat-button>Subir foto perfil</button>
+          </mat-card-actions>
+        </mat-card>
       </div>
     </mat-dialog-content>
     <div class="col-xs-12">
@@ -41,6 +26,7 @@
           cdkFocusInitial
           matDialogClose
           routerLink="/home/dashboard/myservices"
+          (click)="convertToEntrepreneur()"
         >
           Continuar
         </button>

@@ -19,7 +19,10 @@ export class PostserviceviewComponent implements OnInit {
   entrepreneurId: number;
   isCompleted: boolean = false;
 
-  constructor(private servicesService: ServicesService, private authService: AuthService) {
+  constructor(
+    private servicesService: ServicesService,
+    private authService: AuthService
+  ) {
     this.name = '';
     this.description = '';
     this.price = '';
@@ -37,7 +40,7 @@ export class PostserviceviewComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  addService() {
+  async addService() {
     this.servicesService
       .addService(
         new Service(
@@ -49,7 +52,7 @@ export class PostserviceviewComponent implements OnInit {
           this.images,
           true,
           parseInt(this.deliveryTerm),
-          this.authService.getCurrentUser().id
+          this.authService.getCurrentEntrepreneur().id
         )
       )
       .toPromise();

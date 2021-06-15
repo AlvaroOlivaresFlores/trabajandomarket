@@ -27,7 +27,7 @@ export class AdmindialogentrepreneurComponent implements OnInit {
       duration: 1500,
     });
     console.log(this.data.id);
-    this.userc.deleteUser(this.data.id).toPromise();
+    this.userc.deleteEntrepreneur(this.data.id).toPromise();
   }
   openSnackBar2() {
     this._snackBar.open('No bloqueaste este usuario', 'OK', {
